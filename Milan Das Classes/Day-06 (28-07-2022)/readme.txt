@@ -1,5 +1,5 @@
 CLASSWORK:
-    Create a HTML page to display the list of sites that you frequently visit.
+    Create an HTML page to display the list of sites that you frequently visit.
     On clicking on a particular item in the list, it navigates you to the specified site.
 
     MY REGULAR VISIT
