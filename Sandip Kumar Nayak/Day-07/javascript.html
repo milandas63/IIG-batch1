@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <script>
+            function validate(){
+                alert("Hello World");
+            }
+            </script>
+            </head>
+            <body>
+               
+                    <h2>PERSONAL DATA</h2>
+                    <form onsubmit="validate()" action="url" method="post"> 
+                    <table>
+                        <tr>
+                            <td>1.</td>
+                            <td><label>Candidate's Name</label></td>
+                            <td><input type="text" name="user" id="user"></td>
+                        </tr>
+                        <tr>
+                            <td>2.</td>
+                            <td><label>Father's Name</label></td>
+                            <td><input type="text" name="user" id="user"></td>
+                        </tr>
+                        <tr>
+                            <td>3.</td>
+                            <td><label>Date of birth</label></td>
+                            <td><input type="date" name="user" id="user"></td>
+                        </tr>
+                        <tr>
+                            <td>4.</td>
+                            <td><label>Gender</label></td>
+                            <td>
+                                <input type="radio" name="gender" id="gender"> Male
+                                <input type="radio" name="gender" id="gender"> Female
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>5.</td>
+                            <td><label>Highest Qualification</label></td>
+                            <td>
+                                <input type="text" list="select" placeholder="select">
+                                <datalist id="select">
+                                    <option>10th</option>
+                                    <option>12th</option>
+                                    <option>Diploma</option>
+                                    <option>B-Tech</option>
+                                    <option>Post Graduation</option>
+                                </datalist>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>6.</td>
+                            <td><label>Percentage of mark</label></td>
+                            <td><input type="number" name="quantity" id="quantity" min="0" max="100"></td>
+                        </tr>
+                        <tr>
+                            <td>7.</td>
+                            <td><label>Email id</label></td>
+                            <td><input type="text" name="email" id="email"></td>
+                        </tr>
+                        <tr>
+                            <td>8.</td>
+                            <td><label>Phone Number</label></td>
+                            <td><input type="text" name="number" id="number"></td>
+                        </tr>
+                    </table>
+                    <br><br>
+                    <input type="Submit" value="Save">
+                    <input type="Reset" value="Clear">
+                </form>
+            </body>
+</html>
