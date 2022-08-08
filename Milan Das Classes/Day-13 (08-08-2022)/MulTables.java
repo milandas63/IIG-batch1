@@ -20,7 +20,7 @@
 public class MulTables {
 	public static void main(String[] args) {
 		int start = 2;
-		int end = 5;
+		int end = 27;
 		
 		for(int n=start; n<=end; n++) {
 			for(int o=1; o<=10; o++) {
@@ -31,17 +31,22 @@ public class MulTables {
 
 		System.out.println();System.out.println();
 
-		for(int n=1; n<=10; n++) {
-			System.out.println();
-			for(int o=start; o<=end; o++) {
-				System.out.print(padL(o,2) + " x " + padL(n,2) + " = " + padL((n*o),3) + "  ");
+		for(int i=start; i<=end; i+=6) {
+			for(int n=1; n<=10; n++) {
+				System.out.println();
+				for(int o=i; o<=(i+5); o++) {
+					System.out.print(padL(o,2) + " x " + padL(n,2) + " = " + padL((n*o),3) + "  ");
+				}
 			}
+			System.out.println();
 		}
 	}
 	
 	public static String padL(int i, int l) {
 		StringBuffer buf = new StringBuffer(String.valueOf(i));
-		for(int j=buf.length(); j<l; j++) buf.insert(0," ");
+		for(int j=buf.length(); j<l; j++) { 
+			buf.insert(0," ");
+		}
 		return buf.toString();
 	}
 }
