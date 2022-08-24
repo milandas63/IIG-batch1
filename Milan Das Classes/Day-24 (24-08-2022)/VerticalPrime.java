@@ -37,7 +37,7 @@ public class VerticalPrime {
 			}
 		}
 	}
-	
+
 	private static void print() {
 		for(int row=0; row<output.length; row++) {
 			System.out.println();
