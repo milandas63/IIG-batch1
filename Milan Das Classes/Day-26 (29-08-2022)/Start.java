@@ -3,6 +3,8 @@ package tel.dir;
 import java.awt.BorderLayout;
 import java.awt.Font;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.ImageIcon;
 import javax.swing.JButton;
@@ -61,6 +63,24 @@ public class Start {
 			JButton btnSave = new JButton("Save");
 			JButton btnClear = new JButton("Clear");
 			JButton btnExit = new JButton("Exit");
+			btnSave.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					System.out.println("Create CSV file");
+				}
+			});
+			btnClear.addActionListener(new ActionListener() {
+				@Override
+				public void actionPerformed(ActionEvent arg0) {
+					tffName.setText("");
+					tflname.setText("");
+					tfLocation.setText("");
+					tfMobile.setText("");
+					tfEmail.setText("");
+					tffName.requestFocus();
+				}
+			});
+			btnExit.addActionListener(new ExitClass());
 				pnlSouth.add(btnSave);
 				pnlSouth.add(btnClear);
 				pnlSouth.add(btnExit);
