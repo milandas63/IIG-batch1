@@ -1,0 +1,63 @@
+<!--
+	HTML Form having the following items:
+	1.	First name
+	2.	Last name
+	3.	Father's name
+	4.	Date of birth
+	5.	Gender
+	6.	Qualification
+	7.	Email-id
+	8.  Phone number
+	9.  Postal address
+-->
+<html>
+	<head>
+		<title>HTML Form</title>
+		<script>
+			function save() {
+				alert("This is save() button");
+			}
+		</script>
+	</head>
+	<body background="background.jpg">
+		<table>
+			<tr>
+				<td><label>First name: </label></td>
+				<td><input type="text" id="fname" name="fname"></td>
+			</tr>
+			<tr>
+				<td><label>Last name: </label></td>
+				<td><input type="text" id="lname" name="lname"></td>
+			</tr>
+			<tr>
+				<td><label>Father's name: </label></td>
+				<td><input type="text" id="father" name="father"></td>
+			</tr>
+			<tr>
+				<td><label>Date of birth: </label></td>
+				<td><input type="date" id="dob" name="dob"></td>
+			</tr>
+			<tr>
+				<td><label>Gender: </label></td>
+				<td><input type="radio" id="gender" name="gender" value="M"> Male 
+				<input type="radio" id="gender" name="gender" value="F"> Female</td>
+			</tr>
+			<tr>
+				<td><label>Qualification: </label></td>
+				<td>
+					<select>
+						<option value="">Select</option>
+						<option value="HSC">H.S.C.</option>
+						<option value="+2">+2</option>
+						<option value="GR">Graduation</option>
+						<option value="PG">Post Graduate</option>
+						<option value="MP">Master in Philosophy</option>
+						<option value="DR">Doctrate</option>
+					</select>
+				</td>
+			</tr>
+		</table>
+		<br><br>
+		<input type="submit" value=" Save " onclick="save();">
+	</body>
+</html>
