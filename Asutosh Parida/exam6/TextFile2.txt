@@ -1,0 +1,21 @@
+<html lang="en">
+	<head>
+		<title>Prime Ministers of India</title>
+	</head>
+	<body>
+		<a href="https://shop.mattel.com/collections/wwe">
+			<img src="C:\Users\91933\Desktop\Picture1.png">
+		</a>
+		<br><hr><br>
+		<img src="C:\Users\91933\Desktop\Picture1.png" usemap="#linklocation">
+		<map name="linklocation">
+			<area shape="rect" coords="1,1,86,69,87,69,1" href="https://en.wikipedia.org/wiki/Jawaharlal_Nehru/">
+			<area shape="rect" coords="70,2,70,87,143,88,143,2" href="https://en.wikipedia.org/wiki/Rajiv_Gandhi/">
+			<area shape="rect" coords="355,5,523,206" href="https://en.wikipedia.org/wiki/Indira_Gandhi/">
+			<area shape="rect" coords="536,5,699,212" href="https://en.wikipedia.org/wiki/Gulzarilal_Nanda/">
+			<area shape="rect" coords="2,225,165,441" href="https:https://en.wikipedia.org/wiki/V._P._Singh/">
+			<area shape="rect" coords="179,226,345,433" href="https:https://en.wikipedia.org/wiki/Manmohan_Singh">
+			<area shape="rect" coords="359,226,523,436" href="https:https://en.wikipedia.org/wiki/Atal_Bihari_Vajpayee">
+			<area shape="rect" coords="537,231,669,433" href="https://en.wikipedia.org/wiki/Narendra_Modi">
+		</map
+	</body>
