@@ -1,0 +1,57 @@
+<html>
+	<head>
+		<title>Multiplication Tables</title>
+		<script>
+			function tables() {
+				var start = document.getElementById("start").value;
+				var end = document.getElementById("end").value;
+				start = parseInt(start);
+				end = parseInt(end);
+				var count = 0;
+
+				document.writeln("<body>");
+				document.writeln("<table border='1'>");
+				document.writeln("<tr>");
+				for(var i=start; i<end; i++) {
+					document.writeln("<td>");
+					document.writeln("<table>");
+					for(var j=1; j<=10; j++) {
+						document.writeln("<tr>");
+						document.writeln("<td align='right'>"+i+"</td>");
+						document.writeln("<td align='center'>x</td>");
+						document.writeln("<td align='right'>"+j+"</td>");
+						document.writeln("<td align='center'>=</td>");
+						document.writeln("<td align='right'>"+(i*j)+"</td>");
+						document.writeln("</tr>");
+					}
+					document.writeln("</table>");
+					document.writeln("</td>");
+					count = count + 1;
+					if(count>=12) {
+						count = 0;
+						document.writeln("</tr>");
+						document.writeln("<tr>");
+					}
+				}
+				document.writeln("</tr>");
+				document.writeln("</table>");
+				document.writeln("</body>");
+			}
+		</script>
+	</head>
+	<body>
+		<h2>MULTIPLICATION TABLES</h1>
+		<table>
+			<tr>
+				<td>Start number: </td>
+				<td><input type="text" id="start"></td>
+			</tr>
+			<tr>
+				<td>End number: </td>
+				<td><input type="text" id="end"></td>
+			</tr>
+		</table>
+		<br>
+		<input type="button" onclick="tables();" value=" Run ">
+	</body>
+</html>

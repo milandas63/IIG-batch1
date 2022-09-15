@@ -1,0 +1,21 @@
+<html>
+	<head>
+		<title>Document</title>
+	</head>
+	<body>
+		<h1>Piramid</h1>
+		<script>
+			var space = 40;
+			var star = 1;
+
+			document.writeln("<tt>");
+			for(var i=0; i<10; i++) {
+				for(var j=0; j<space; j++) document.write("&nbsp;");
+				for(var j=0; j<star;  j++) document.write("*");
+				document.writeln("<br>");
+				star+=2; space--;
+			}
+			document.writeln("</tt>");
+		</script>
+	</body>
+</html>

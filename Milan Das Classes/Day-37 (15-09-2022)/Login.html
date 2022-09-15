@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<title>First JavaScript</title>
+		<script>
+			function validate() {
+				var nameObj = document.getElementById("username");
+				var nameVal = nameObj.value;
+				var yesno = true;
+
+				if(nameVal != "MILAN") {
+					alert("Wrong Username");
+					yesno = false;
+				} else {
+					alert("Correct Username");
+					yesno = true;
+				}
+				return yesno;
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Login</h1>
+		<br><hr><br>
+		<form action="https://www.google.com" onsubmit="return validate();" method="get">
+			<table>
+				<tr>
+					<td align="left">Username: </td>
+					<td align="left"><input type="text" name="username" id="username"></td>
+				</tr>
+				<tr>
+					<td align="left">Password: </td>
+					<td align="left"><input type="password" name="password" id="password"></td>
+				</tr>
+			</table>
+			<br><br>
+			<input type="submit" value="Accept">
+			&nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="reset" value="Clear">
+		</form>
+	</body>
+</html>
