@@ -1,0 +1,39 @@
+<html>
+    <head>
+        <title> link page</title>
+        <script>
+            function Hello() {
+                alert("Ok");
+                var name = document.getElementById("name").value;
+                document.writeln("Hello " + name)
+                var Father name = document.getElementById("Fathername").value;
+                document.writeln("" + Father name)
+                var Gender = document.getElementById("gender").value;
+                document.writeln("" + Gender)
+                var DOB = document.getElementById("DOB").value;
+                document.writeln("" + DOB)
+             }
+        </script>
+    </head>
+    <body>
+        What is your name:
+        <input type = "text" id = "name">
+        <br><br>
+       
+        What is your father name:
+        <input type = "text" id = "Fathername">
+        <br><br>
+
+        What is your Gender:
+       <input type="radio" id="gender" name="gender" value="M"> Male 
+       <input type="radio" id="gender" name="gender" value="F"> Female 
+        <br><br>
+       
+        What is your DOB:
+        <input type = "date" id = "DOB">
+        <br><br>
+
+        <input type="button" value=" Ok " onClick="Hello();">
+        <br><br>
+    </body>
+</html>
