@@ -1,0 +1,29 @@
+<html>
+	<head>
+		<title>Javascript Array</title>
+		<script>
+			function count() {
+				var data = document.getElementById("text").value;
+				data = data.toUpperCase();
+				var priya = [0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0];
+				var oneChar;
+
+				for(var i=0; i<data.length; i++) {
+					oneChar = data.charCodeAt(i);
+					priya[oneChar-65]++;
+				}
+
+				for(var i=0; i<priya.length; i++) {
+					if(priya[i]>0) 
+						document.writeln(String.fromCharCode(i+65)+" => "+priya[i]+"<br>");
+				}
+			}
+		</script>
+	</head>
+	<body>
+		Enter a text<br>
+		<input type="text" id="text">
+		<br><br>
+		<button onClick="count();"> Count </button>
+	</body>
+</html>
