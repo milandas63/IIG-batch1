@@ -1,0 +1,24 @@
+<html>
+    <head>
+        <title>Login Page</title>
+        <script>
+            function hello(){
+                var name = document.getElementById("name").value;
+                var father = document.getElementById("father").value;
+                var mother = document.getElementById("mother").value;
+                document.write("<h1>"+"Hello "+name+"</h1>");
+                document.write("<h2>"+"Father's name "+father+"</h2>");
+                document.write("<h3>"+"Mother's name "+mother+"</h3>");
+            }
+        </script>
+    </head>
+    <body>
+        <br><br>
+        NAME:<input type="text" id="name">
+        <br><br>
+       FATHER'S NAME:<input type="text" id="father">
+       <br><br>
+       MOTHER'S NAME:<input type="text" id="mother">
+        <button onclick="hello();">OK</button>
+    </body>
+</html>
