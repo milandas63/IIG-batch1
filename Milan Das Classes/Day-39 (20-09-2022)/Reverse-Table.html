@@ -1,0 +1,67 @@
+<html>
+	<head>
+		<title>Table</title>
+		<script>
+			function examine() {
+				var tabObj = document.getElementById("batch1");
+				var cellData;
+
+				document.writeln("<body>");
+				document.writeln("<table border='1'>");
+				document.writeln("<tr>");
+				for(var j=0; j<tabObj.rows[0].cells.length; j++) {
+					cellData = tabObj.rows[0].cells[j].innerHTML;
+					document.writeln("<td>"+cellData+"</td>");
+				}
+				document.writeln("</tr>");
+				
+				for(var i=tabObj.rows.length-1; i>=1; i--) {
+					document.writeln("<tr>");
+					for(var j=0; j<tabObj.rows[i].cells.length; j++) {
+						cellData = tabObj.rows[i].cells[j].innerHTML;
+						document.writeln("<td>"+cellData+"</td>");
+					}
+					document.writeln("</tr>");
+				}
+				document.writeln("</table>");
+				document.writeln("</body>");
+			}
+		</script>
+	</head>
+	<body>
+		<table border='1' id="batch1">
+			<tr>
+				<th>SLNO</th>
+				<th>NAME</th>
+				<th>GENDER</th>
+				<th>LOCATION</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Asutosh Parida</td>
+				<td>Male</td>
+				<td>Sundargarh</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Asim Hembram</td>
+				<td>Male</td>
+				<td>Phulbani</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Gopal Krishna Mistri</td>
+				<td>Male</td>
+				<td>Sarang</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>P S Usha</td>
+				<td>Female</td>
+				<td>Jharkhand</td>
+			</tr>
+		</table>
+		<br><br>
+		<button onclick="examine();"> Reverse </button>
+	</body>
+</html>

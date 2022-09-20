@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Prime Number Generator</title>
+		<style>
+			h1 {
+				color: brown;
+				text-align: center;
+			}
+			label {
+				font-family: arial;
+				font-size: 18px;
+				color: blue;
+			}
+			input {
+				width: 100;
+				height: 25;
+			}
+		</style>
+		<script>
+			function generate() {
+				var from = document.getElementById("start").value;
+				var to = document.getElementById("end").value;
+				var count = 0;
+				var yesno;
+
+				from = parseInt(from);
+				to = parseInt(to);
+
+				document.writeln("PRIME NUMBERS");
+				document.writeln("<br><hr><br>");
+				document.writeln("<table border='1' cellpadding='10' cellspacing='10'>");
+				document.writeln("<tr>");
+				for(var i=from; i<=to; i++) {
+					yesno = true;
+					for(var j=2; j<(i/2); j++) {
+						if(i%j==0) {
+							yesno = false;
+							break;
+						}
+					}
+					if(yesno) {
+						document.writeln("<td style='background-color:wheat;text-align:center;font-family:arial;font-style:bold;font-size:18px;'>"+i+"</td>");
+						count++;
+						if(count>15) {
+							count = 0;
+							document.writeln("</tr>");
+							document.writeln("<tr>");
+						}
+					}
+				}
+				document.writeln("</tr>");
+				document.writeln("</table>");
+			}
+		</script>
+	</head>
+	<body background="PrimeNo.jpg">
+		<h1>Prime Number Generator</h1>
+		<hr size=5><br><br><br><br>
+		<center>
+		<table style="">
+			<tr>
+				<td><label>Start Number: </label></td>
+				<td><input type="number" id="start"></td>
+			</tr>
+			<tr>
+				<td><label>End Number: </label></td>
+				<td><input type="number" id="end"></td>
+			</tr>
+		</table>
+		<br><br><br>
+		<button onClick="generate();"> Generate </button>
+		</center>
+	</body>
+</html>
