@@ -1,0 +1,56 @@
+<html>
+    <head>
+        <title>arithmatic function</title>
+        <script>
+            function generate() {
+                var count = 0;
+                var first = document.getElementById("start").value;
+                var last = document.getElementById("end").value;
+                start = parseInt(first);
+                end = parseInt(last);
+                document.writeln("Prime no's");
+                document.writeln("<br><hr><br>");
+                document.writeln("<table border='1'>");
+                document.writeln("<tr>");
+
+                for(var i=start; i<=end; i++) {
+                    yn = true;
+                    for(var j=2; j<i; j++) {
+                        if(i%j==0) {
+                            yn = false;
+                            break;
+                        }
+                    }
+                    if(yn) {
+                        document.writeln("<td style='text-allign:center;font-style:bold;size=18;'>"+i+"</td>");
+                        count++;
+                        if(count>=15) {
+                            document.writeln("</tr>");
+                            document.writeln("<tr>");
+                            count = 0;
+                        }
+                    }
+                }
+                document.writeln("</tr>");
+                document.writeln("</table>");
+            }
+        </script>
+    </head>
+    <body background="numberimg.jpg">
+        <h1>primeno</h1>
+        <hr size="9"> <br><br><br><br><br>
+        <center>
+            <table style="">
+                <tr>
+                    <td><label>Start number:</label></td>
+                    <td><input style="number" id="start"></td>
+                </tr>
+                <tr>
+                    <td><label>End number: </label></td>
+                    <td><input type="number" id="end"></td>
+                </tr>
+            </table>
+            <button onClick="generate();"> Generate </button>
+        </center>
+    </body>
+</html>
