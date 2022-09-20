@@ -1,0 +1,32 @@
+<html>
+    <head>
+        
+    <script>
+           a = window.prompt("Enter no 1: ");
+           b = window.prompt("Enter no 2: ");
+           document.write("");
+           document.write("<table border='1' cellspacing='5' cellpadding='5'><tr>");
+        for (i = a; i <= b; i++) {
+            yn = true;
+            for (j = 2; j <= i / 2; ++j) {
+                if (i % j == 0) {
+                    yn = false;
+                    break;
+                }
+            }
+            if (yn) {
+                document.write("<td>");
+                document.write(i," ");
+                document.write("</td>");
+                if ( a % 10 === 0 && a > 0 ){
+                    document.write("</tr><tr>");
+                }
+                
+            }
+            document.write("</tr></table>");
+        }
+    </script>
+    </head>
+    <body background="prime_numbers.jpg.webp">
+    </body>
+</html>
