@@ -1,0 +1,31 @@
+<html>
+    <head>
+     <script>
+        
+       const lowerNumber = parseInt(prompt('Enter 1 number: '));
+        const higherNumber = parseInt(prompt('Enter 2 number: '));
+
+document.write();
+
+
+for (let i = lowerNumber; i <= higherNumber; i++) {
+    let flag = 0;
+
+    for (let j = 2; j < i; j++) {
+        if (i % j == 0) {
+            flag = 1;
+            break;
+        }
+    }
+
+   
+    if (i > 1 && flag == 0) {
+        document.write(i);
+    }
+}
+
+        </script>
+</head>
+        <body background="prime-number.jpg">
+      </body>
+</html>  
