@@ -1,0 +1,32 @@
+<html>
+    <head>
+        <title>JavaScript to print prime numbers between two numbers!</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script>
+            function printPrime() {
+                "use strict";
+            var i, j, c, start, end;
+                start = parseInt(document.getElementById('start').value);                
+                end = parseInt(document.getElementById('end').value);
+                for (i = start; i <= end; i++) {                    
+                    c = 0;
+                    for (j = 1; j <= i; j++) {
+                        if (i % j == 0) {
+                            c++;
+                        }
+                    }
+                    if (c == 2) {
+                        document.getElementById("result").insertAdjacentHTML('beforeend', i + '<br>');
+                    }
+                }
+            }
+        </script>
+    </head>
+        <body background="PN.jpg">
+        <h2>JavaScript to print Prime numbers between two numbers!</h2>
+        Start:  <input type="number" name="start" id="start" min="1" style="width: 100px;" value="10" />&nbsp;
+        End:  <input type="number" name="end" id="end" min="1" style="width: 100px;" value="100" />&nbsp;<input type="submit" value="Print Prime Numbers" onclick="printPrime()" name="print" />
+        <div id="result"></div>
+    </body>
+</html>
