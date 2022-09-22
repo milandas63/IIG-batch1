@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script>
+        function fact1() {
+        var num=parseInt(document.getElementById("number").value);
+        for(var i=1; i<(num/2); i++){
+            if(num % i==0){
+                document.write(i+",");
+            }
+        }
+    }
+    </script>
+</head>
+<body style = "text-align: center; font-size: 20px;">
+<h1> Finding factor of a no :-</h1>
+Enter a number: <input id = "number">
+<br><br>
+<button onclick = "fact1()"> Factorial </button>
+</body>
+</html>
