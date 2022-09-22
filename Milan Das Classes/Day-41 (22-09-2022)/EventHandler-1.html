@@ -1,0 +1,17 @@
+<html>
+	<head>
+		<script type="text/javascript">
+			function whichButton(event) {
+				alert("Button= "+event.button);
+				if (event.button==2) {
+					alert("You clicked the right mouse button!");
+				} else {
+					alert("You clicked the left mouse button!");
+				}
+			}
+		</script>
+	</head>
+	<body onmousedown="whichButton(event)">
+		<p>Click in the document. An alert box will alert which mouse button you clicked.</p>
+	</body>
+</html>
