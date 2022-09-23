@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body style="text-align: center;" background="word-counter.png">
+	<h1 style="color: rgba(208, 20, 218, 0.843)">
+		WELLCOME
+	</h1>
+<p>
+		Type in the box 
+	</p>
+	<textarea id="inputField" rows=10 cols="60">
+	</textarea>
+	<br><br>
+	<button onclick="countWords()">
+		Count
+	</button>
+	<br><br>
+<p> Word Count:
+		<span id="show">0</span>
+	</p>
+	<script>
+		function countWords() {
+			var text = document
+				.getElementById("inputField").value;
+			var numWords = 0;
+			for (var i = 0; i < text.length; i++) {
+				var currentCharacter = text[i];
+				if (currentCharacter == " ") {
+					numWords += 1;
+				}
+			}
+			numWords += 1;
+			document.getElementById("show")
+				.innerHTML = numWords;
+		}
+	</script>
+</body>
+
+</html>
+
