@@ -1,0 +1,79 @@
+<html>
+	<head>
+		<title>Table</title>
+		<script>
+			function examine() {
+				var tabObj = document.getElementById("ashu");
+				var cellData;
+
+				document.writeln("<body>");
+				document.writeln("<table border='1'>");
+				document.writeln("<tr>");
+				for(var j=0; j<tabObj.rows[0].cells.length; j++) {
+					cellData = tabObj.rows[0].cells[j].innerHTML;
+					document.writeln("<td>"+cellData+"</td>");
+				}
+				document.writeln("</tr>");
+				
+				for(var i=tabObj.rows.length-1; i>=1; i--) {
+					document.writeln("<tr>");
+					for(var j=0; j<tabObj.rows[i].cells.length; j++) {
+						cellData = tabObj.rows[i].cells[j].innerHTML;
+						document.writeln("<td>"+cellData+"</td>");
+					}
+					document.writeln("</tr>");
+				}
+				document.writeln("</table>");
+				document.writeln("</body>");
+			}
+		</script>
+	</head>
+	<body>
+		<table border='1' id="ashu">
+			<tr bgcolor="LightBlue">
+				<th>SLNO</th>
+				<th>COUNTRY</th>
+				<th>CAPITAL</th>
+				<th>CURRENCY</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Afghanistan</td>
+				<td>Kabul</td>
+				<td>Afghani</td>
+			</tr>
+			<tr bgcolor="Gray">
+				<td>2</td>
+				<td>Argentina</td>
+				<td>Buenos Aires</td>
+				<td>Peso</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Brazil</td>
+				<td>Brasilla</td>
+				<td>Real</td>
+			</tr>
+			<tr bgcolor="Gray">
+				<td>4</td>
+				<td>Canada</td>
+				<td>Ottawa</td>
+				<td>Dollar</td>
+			</tr>
+            <tr>
+				<td>5</td>
+				<td>Denmark</td>
+				<td>Copenhagen</td>
+				<td>Copenhagen</td>
+			</tr>
+            <tr bgcolor="Gray">
+				<td>6</td>
+				<td>Guinea</td>
+				<td>Conakry</td>
+				<td>Franc</td>
+			</tr>
+		</table>
+		<br><br>
+		<button onclick="examine();"> select </button>
+	</body>
+</html>

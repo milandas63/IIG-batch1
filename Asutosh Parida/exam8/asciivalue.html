@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <title>count the number</title>
+        <body>
+        <script>
+     function asciivalue(){
+        var tabObj = document.getElementById("ashu");
+         let l = str.length;
+         let pos = 0;
+         let sum = 0;
+         let bigSum = 0;
+         for (let i = 0; i < l; i++) {
+             if (str[i] == ' ') {
+    
+                 bigSum += sum;
+                 sumArr[pos++] = sum;
+                 sum = 0;
+             }
+             else
+                 sum += str[i].charCodeAt(0);           
+         }
+         sumArr[pos] = sum;
+         bigSum += sum;
+         return bigSum;
+     }
+      
+     let str = "GeeksforGeeks, a computerscience portal for geeks";
+         let ctr = 0;
+         for (let i = 0; i < str.length; i++)
+             if (str[i] == ' ')
+                 ctr++;
+            
+         let sumArr = new Array(ctr + 1);
+
+         let sum = asciivalue();
+         document.write("Sum of ASCII values:<br>");
+         for (let i = 0; i <= ctr; i++)
+              document.write(sumArr[i] + " ");
+         document.write("<br>");
+          
+ </script>
+      </body>
+    </head>
+</html>
