@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>
+            validate the input data
+        </title>
+        <script>
+            function validate() {
+                var a = document.getElementById("name").value;
+                var yn = true;
+                if (a != "rakesh") {
+                    alert("wrong name");
+                    yn = false;
+                }
+                else {
+                    alert("correct name");
+                    yn = true;
+                }
+
+            }
+        </script>
+    </head>
+    <body>
+        <h1 style="color:aqua"> Enter Your Name: </h1><br><hr><br>
+        Name:- <input type="text" id="name"><br><br>
+        <button onclick="validate();">check if correct</button>
+    </body>
+</html>
