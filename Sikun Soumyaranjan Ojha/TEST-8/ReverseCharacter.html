@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<title>Table</title>
+		<script>
+            function examine(){
+                if(!str || str.length < 2 || typeof str!== 'string') {
+        return 'Not valid';
+    }
+        const revArray = [];
+        const length = str.length - 1;
+    
+    for(let i = length; i >= 0; i--) {
+        revArray.push(str[i]);
+    }
+   
+    return revArray.join('');
+    document.writeln(ReverseString(<td>"+cellData+"</td>))
+    dicumnet.writeln("</tr>")
+    dicumnet.writeln("<table>")
+    dicumnet.writeln("<body>")
+
+
+            }
+		</script>
+	</head>
+	<body>
+		<table border='1' id="batch1">
+			<tr>
+				<th>SLNO</th>
+				<th>COUNTRY</th>
+				<th>CAPITAL</th>
+				<th>CURRENCY</th>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>Afghanistan</td>
+				<td>Kabul</td>
+				<td>Afghani</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Argentina</td>
+				<td>Buenos Aires</td>
+				<td>Peso</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Brazil</td>
+				<td>Brasilla</td>
+				<td>Real</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Canada</td>
+				<td>Ottawa</td>
+				<td>Dollar</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Denmark</td>
+				<td>Copenhagen</td>
+				<td>Danish Krone</td>
+            </tr>
+			<tr>
+				<td>6</td>
+				<td>Guinea</td>
+				<td>Conakry</td>
+				<td>Franc</td>
+			</tr>
+		</table>
+		<br><br>
+		<button onclick="examine();"> SELECT </button>
+	</body>
+</html>

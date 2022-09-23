@@ -1,0 +1,19 @@
+<html>
+  <head>
+     <script>
+     function validateForm() {
+      let x = document.forms["myForm"]["name"].value;
+      if (x == "") {
+      alert("Name must be filled out");
+      return false;
+  }
+}
+     </script>
+  </head>
+  <body style="text-align: center;" background="https://wallpapercave.com/wp/wp2726600.jpg">
+   <h2>IIG VARSITY</h2>
+   <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+    Name: <input type="text" name="name">
+   <input type="submit" value="Submit"></form>
+</body>
+</html>
