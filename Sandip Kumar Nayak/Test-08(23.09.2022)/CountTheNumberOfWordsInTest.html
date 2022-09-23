@@ -1,0 +1,26 @@
+<html>
+    <body style="text-align: center">
+       <h1 style="color: red">IIG VARSITY</h1>
+       <p>Type in the textbox and click on the button to count the words</p>
+       <textarea id="inputField" rows=10 cols="60"></textarea>
+       <br><br>
+       <button onclick="countWords()"> Count Words </button>
+       <br><br>
+       <p> Word Count:<span id="show">0</span></p>
+    <script>
+        function countWords() {
+            var text = document
+                .getElementById("inputField").value;
+            var numWords = 0;
+            for (var i = 0; i < text.length; i++) {
+                var currentCharacter = text[i];
+                if (currentCharacter == " ") {
+                    numWords += 1;
+                }
+            }
+            numWords += 1;
+            document.getElementById("show").innerHTML = numWords;
+        }
+    </script>
+   </body>
+</html>
