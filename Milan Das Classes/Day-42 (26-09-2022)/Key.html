@@ -1,0 +1,18 @@
+<html>
+	<head>
+		<title>Document</title>
+		<script>
+			function run(event) {
+				var p = document.getElementById("show");
+				p.innerHTML = p.innerHTML+event.key.toUpperCase();
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Enter Text Data</h1>
+		<br><br>
+		<input type="text" onkeypress="run(event);">
+		<br><br><br>
+		<p id="show"></p>
+  	</body>
+</html>

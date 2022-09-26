@@ -1,0 +1,77 @@
+<html>
+	<head>
+		<title>Form Validation</title>
+		<script>
+			function validate() {
+				var value;
+				var obj = document.getElementById("name");
+				value = obj.value;
+				if(value=="") {
+					obj.focus();
+					return false;
+				}
+				var one;
+				for(var i=0; i<value.length; i++) {
+					one = value.charCodeAt(i);
+					if( !((one>=65 && one<=90) || (one>=97 && one<=122) || one==32 )) {
+						obj.focus();
+						return false;
+					}
+				}
+
+				var obj = document.getElementById("father");
+				value = obj.value;
+				var one;
+				for(var i=0; i<value.length; i++) {
+					one = value.charCodeAt(i);
+					if( !((one>=65 && one<=90) || (one>=97 && one<=122) || one==32 )) {
+						obj.focus();
+						return false;
+					}
+				}
+				
+				return true;
+			}
+		</script>
+	</head>
+	<body>
+		<form action="https://www.google.com" onsubmit="return validate();">
+			<table>
+				<tr>
+					<td>Candidate's name</td>
+					<td><input type="text" id="name" name="name"></td>
+				</tr>
+				<tr>
+					<td>Father's name</td>
+					<td><input type="text" id="father" name="father"></td>
+				</tr>
+				<tr>
+					<td>Date of birth</td>
+					<td><input type="date" id="dob" name="dob"></td>
+				</tr>
+				<tr>
+					<td>Gender</td>
+					<td>
+						<input type="radio" name="gender" value="Male"> Male 
+						<input type="radio" name="gender" value="Female"> Female 
+					</td>
+				</tr>
+				<tr>
+					<td>Qualification</td>
+					<td>
+						<select>
+							<option value="">select</option>
+							<option value="HSC">Higher Secondary School</option>
+							<option value="+2">Intermediate +2</option>
+							<option value="GR">Graduation</option>
+							<option value="PG">Master Post Graduate</option>
+							<option value="DOC">Doctorate</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+			<br><br>
+			<input type="submit" value=" Save ">
+		</form>
+	</body>
+</html>
