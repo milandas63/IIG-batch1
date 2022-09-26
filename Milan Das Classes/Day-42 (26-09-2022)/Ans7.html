@@ -1,0 +1,19 @@
+<html>
+	<head>
+		<title>OnKeyPress</title>
+		<script>
+			function press(event) {
+				var keyVal = event.key;
+				var outObj = document.getElementById("output");
+				outObj.innerHTML = outObj.innerHTML+keyVal.toUpperCase();
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Enter a text</h1>
+		<br><br>
+		<input type="text" onKeyPress="press(event);" >
+		<br><br>
+		<p id="output"></p>
+	</body>
+</html>

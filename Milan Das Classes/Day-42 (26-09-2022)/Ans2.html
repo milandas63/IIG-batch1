@@ -1,0 +1,71 @@
+<html>
+	<head>
+		<title>Reverse Content of Table</title>
+		<script>
+			function reverse(text) {
+				var retValue = "";
+				for(var i=text.length-1; i>=0; i--) {
+					retValue = retValue + text.charAt(i);
+				}
+				return retValue;
+			}
+
+			function reverseContent() {
+				var tabObj = document.getElementById("countryList");
+				for(var i=0; i<tabObj.rows.length; i++) {
+					for(var j=0; j<tabObj.rows[i].cells.length; j++) {
+						tabObj.rows[i].cells[j].innerHTML = reverse(tabObj.rows[i].cells[j].innerHTML);
+					}
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<table border='1' id="countryList">
+			<tr>
+				<th>SLNO</th>
+				<th>COUNTRY</th>
+				<th>CAPITAL</th>
+				<th>CURRENCY</th>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Afganistan</td>
+				<td>Kabul</td>
+				<td>Afgani</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Argentina</td>
+				<td>Buenos Aires</td>
+				<td>Pesco</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Brazil</td>
+				<td>Brasilla</td>
+				<td>Real</td>
+			</tr>
+			<tr>
+				<td>4</td>
+				<td>Canada</td>
+				<td>Ottawa</td>
+				<td>Dollar</td>
+			</tr>
+			<tr>
+				<td>5</td>
+				<td>Denmark</td>
+				<td>Copenhagen</td>
+				<td>Danish Krone</td>
+			</tr>
+			<tr>
+				<td>6</td>
+				<td>Guinea</td>
+				<td>Conakry</td>
+				<td>Franc</td>
+			</tr>
+		</table>
+		<br><br>
+		<button onclick="reverseContent();">Reverse Content</button>
+	</body>
+</html>

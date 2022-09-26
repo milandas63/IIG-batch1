@@ -1,0 +1,65 @@
+<html>
+	<head>
+		<title>Horizontal Reverse</title>
+		<script>
+			function big() {
+				alert("ok-ok");
+			}
+			function horizontal() {
+				document.write("asdfasdf");
+				alert("Ok");
+				var tabObj = document.getElementById("students");
+				document.writeln("<table border='1'>");
+				for(var i=0; i<tabObj.rows.length; i++) {
+					document.writeln("<tr>");
+					for(var j=tabObj.rows[i].cells.length-1; j>=0; j--) {
+						document.writeln("<td>"+tabObj.rows[i].cells[j].innerHTML+"</td>");
+					}
+				document.writeln("</tr>");
+				document.writeln("</table>");
+			}
+		</script>
+	</head>
+	<body>
+		<table id="students" border='1'>
+			<tr>
+				<th>Name of the Student</th>
+				<th>Name of the College</th>
+				<th>Gender</th>
+				<th>Qualification</th>
+			</tr>
+			<tr>
+				<td>Asim Hembram</td>
+				<td>Silicon</td>
+				<td>Male</td>
+				<td>B Tech</td>
+			</tr>
+			<tr>
+				<td>Narendra Modi</td>
+				<td>U K University</td>
+				<td>Male</td>
+				<td>PhD</td>
+			</tr>
+			<tr>
+				<td>Milan Das</td>
+				<td>Delhi University</td>
+				<td>Male</td>
+				<td>PhD</td>
+			</tr>
+			<tr>
+				<td>Asutosh Parida</td>
+				<td>BPUT University</td>
+				<td>Male</td>
+				<td>B Tech</td>
+			</tr>
+			<tr>
+				<td>Sandip Kumar Nayak</td>
+				<td>College of Engineering</td>
+				<td>Male</td>
+				<td>B Tech</td>
+			</tr>
+		</table>
+		<br><br>
+		<button onclick="big();">Horizontal Reverse</button>
+	</body>
+</html>

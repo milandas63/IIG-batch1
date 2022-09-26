@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Sum ASCII</title>
+		<script>
+			function CalculateASC() {
+				var inputText = document.getElementById("word").value;
+				var sum = 0;
+				var asc = 0;
+				for(var i=0; i<inputText.length; i++) {
+					asc = inputText.charCodeAt(i);
+					sum = sum + asc;
+				}
+				document.getElementById("res").innerHTML = "Sum of ASCII: "+sum
+			}
+		</script>
+	</head>
+	<body>
+		<h1>SUM ASCII</h1>
+		<br><br>
+		Enter a text<br>
+		<input type="text" id="word">
+		<br><br>
+		<button onclick="CalculateASC();">Find ASCII</button>
+		<br><br>
+		<p id="res"></p>
+	</body>
+</html>
+<!--
+	WORLD = 87 + 79 + 82 + 76 + 68 = 392
+-->
