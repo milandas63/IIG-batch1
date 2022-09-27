@@ -1,0 +1,20 @@
+ create table rakesh1(
+    ->      sl_no              int(10)                         not null auto_increment,
+    ->      name               varchar(100)                    not null,
+    ->      mobile_no          varchar(100)                    not null,
+    ->      Email_id           varchar(100)                    not null,
+    ->      user_name          varchar(100)                    not null,
+    ->      primary key(sl_no)
+    ->      );
+
+insert into rakesh1(name,mobile_no,Email_id,user_name)
+values('P S Usha','7008334116','ushanair2956@gmail.com','Ushanair1234'),
+('Pratapaditya Mishra',       '7586910935',    'mishrapratapaditya1234@gmail.com',    'Mishra-Adi175'),
+('Sandip Kumar Nayak   ',     '9178335762 ',   'sandipkumarnayak10@gmail.com      ',  'SandipNayak98'),
+('Sikun Soumyaranjan Ojha',   '6370398943  ',  'sikunsoumyaranjan100@gmail.com     ', 'Sikunsoumyaranjan'),
+('Gopal Krishna Mistry     ', '7749917379  ',  'gopalpapu86@gmail.com               ','papu86'),
+('Susmita Parida            ','7978125106   ', 'susmita.paridacs2010@gmail.com      ','srsusmita92'),
+('Asutosh Parida       ',     '9337407424   ', 'asutoshps554@gmail.com              ','sipu17'),
+('Priyabrata Sahoo      ',    '9390507733    ','spriyabrata456@gmail.com            ','Priyabrata678'),
+('Rakesh Das             ',   '8112178110   ', 'rakeshdash431@gmail.com             ','rakeshdas431'),
+('Asim Hemram             ',  '7978121967   ', 'hemramprem@gmail.com                ','hemr22');
