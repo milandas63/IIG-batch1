@@ -1,0 +1,31 @@
+ CREATE TABLE batch3(
+     slno                    INT(6)                   NOT NULL AUTO_INCREMENT,
+     student_name            VARCHAR(100)             NOT NULL,
+     email_id                VARCHAR(100)             NOT NULL,
+     mobile_no               VARCHAR(100)             NOT NULL,
+     nick_name               VARCHAR(100)             NOT NULL,
+     PRIMARY KEY(slno)
+     );
+
+1.  P S Usha                  7008334116    ushanair2956@gmail.com              Ushanair1234
+2.  Pratapaditya Mishra       7586910935    mishrapratapaditya1234@gmail.com    Mishra-Adi175
+3.  Sandip Kumar Nayak        9178335762    sandipkumarnayak10@gmail.com        SandipNayak98
+4.  Sikun Soumyaranjan Ojha   6370398943    sikunsoumyaranjan100@gmail.com      Sikunsoumyaranjan
+5.  Gopal Krishna Mistry      7749917379    gopalpapu86@gmail.com               papu86
+6.  Susmita Parida            7978125106    susmita.paridacs2010@gmail.com      srsusmita92
+7.  Asutosh Parida            9337407424    asutoshps554@gmail.com              sipu17
+8.  Priyabrata Sahoo          9390507733    spriyabrata456@gmail.com            Priyabrata678
+9.  Rakesh Das                8112178110    rakeshdash431@gmail.com             rakeshdas431
+10. Asim Hemram               7978121967    hemramprem@gmail.com                hemr22
+
+INSERT INTO batch3(student_name,              email_id,                              mobile_no,      nick_name)
+VALUES            ('P S Usha',		          'ushanair2956@gmail.com',		        '7008334116',   'Ushanair'),
+                  ('Pratapaditya Mishra',     'mishrapratapaditya1234@gmail.com',   '7586910935',   'MishraAdi'),
+                  ('Sandip Kumar Nayak',      'sandipkumarnayak10@gmail.com',       '9178335762',   'SandipNayak'),
+                  ('Sikun Soumyaranjan Ojha', 'sikunsoumyaranjan100@gmail.com',     '6370398943',   'Sikunsoumyaranjan'),
+                  ('Gopal Krishna Mistry',    'gopalpapu86@gmail.com',              '7749917379',   'papu'),
+                  ('Susmita Parida',          'susmita.paridacs2010@gmail.com',     '7978125106',   'srsusmita'),
+                  ('Asutosh Parida',          'asutoshps554@gmail.com',             '9337407424',   'sipu'),
+                  ('Priyabrata Sahoo',        'spriyabrata456@gmail.com',           '9390507733',   'Priyabrata'),
+                  ('Rakesh Das',              'rakeshdash431@gmail.com',            '8112178110',   'rakeshdas'),
+                  ('Asim Hemram',             'hemramprem@gmail.com',               '7978121967',   'hemr');
