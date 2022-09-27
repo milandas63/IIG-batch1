@@ -1,0 +1,87 @@
++------------+
+| 27-09-2022 |
++------------+
+    =   Data is stored in a RDBMS engine
+    =   RDBMS stands Relational DataBase Management System
+    =   There are two types of RDBMS engines, Embedded and Server based
+    =   Data is stored in form of ROWS and COLUMNS
+    =   All RDBMS engines understand the SQL language
+    =   SQL stands for Structured Query Language
+    =   All SQL commands are terminated by a semi-color (;)
+    =   SQL is not a case sensitive language
+
+    =   CREATE DATABASE [IF NOT EXISTS] <dbName>;
+    =   To view the list of databases that already exist, type:
+        SHOW DATABASES;
+
+    =   To select one particular database, type:
+        USE <dbName>;
+
+    =   To create a table, type:
+        CREATE TABLE [IF NOT EXISTS] <tbName>(
+            column1         type(length)        column-constraints,
+            column2         type(length)        column-constraints,
+            column3         type(length)        column-constraints,
+            column4         type(length)        column-constraints,
+            column5         type(length)        column-constraints,
+            table-constraints
+        )
+        Example:
+            CREATE TABLE batch1(
+                student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+                student_name        VARCHAR(100)        NOT NULL,
+                father_name         VARCHAR(100)        DEFAULT NULL,
+                gender              ENUM('F', 'M')      DEFAULT NULL,
+                date_of_birth       DATE                DEFAULT NULL,
+                email_id            VARCHAR(100)        DEFAULT NULL,
+                mobile_no           VARCHAR(100)        DEFAULT NULL,
+                PRIMARY KEY(student_id)
+            );
+
+            CREATE TABLE marks(
+                slno                INT(6)              NOT NULL AUTO_INCREMENT,
+                student_id          INT(6)              REFERENCES batch1(student_id),
+                test1               INT(3),
+                test2               INT(3),
+                test3               INT(3),
+                test4               INT(3),
+                test5               INT(3),
+                test6               INT(3),
+                test7               INT(3),
+                test8               INT(3),
+                PRIMARY KEY(slno)
+            );
+
+    =   To view the list of columns or structure of the table, type:
+        DESCRIBE <tbName>;
+        DESCRIBE batch1;
+        +---------------+---------------+------+-----+---------+----------------+
+        | Field         | Type          | Null | Key | Default | Extra          |
+        +---------------+---------------+------+-----+---------+----------------+
+        | student_id    | int(6)        | NO   | PRI | NULL    | auto_increment |
+        | student_name  | varchar(100)  | NO   |     | NULL    |                |
+        | father_name   | varchar(100)  | YES  |     | NULL    |                |
+        | gender        | enum('F','M') | YES  |     | NULL    |                |
+        | date_of_birth | date          | YES  |     | NULL    |                |
+        | email_id      | varchar(100)  | YES  |     | NULL    |                |
+        | mobile_no     | varchar(100)  | YES  |     | NULL    |                |
+        +---------------+---------------+------+-----+---------+----------------+
+
+    =   To check the list of tables already created, type:
+        SHOW TABLES;
+
+    =   To delete one table, type:
+        DROP TABLE [IF EXISTS] <tbName>
+
+    =   Data is inserted into the table:
+        INSERT INTO <tbName>[column_list] VALUES(data_list);
+        Example:
+            INSERT INTO batch1(student_name,father_name,gender,date_of_birth,email_id,mobile_no)
+            VALUES('Asutosh Parida','Parida','M','1999-11-25','asutoshparida@gmail.com','9798168568'),
+                  ('Asim Hembram','Hembram','M','1998-03-18','asimhembram@gmail.com','9778911223'),
+                  ('Priyabrata Sahoo','Sahoo','M','1998-05-11','priyabrata@gmail.com','7871122334'),
+                  ('Susmita Parida','Parida','F','1997-06-04','susmitaparida@gmail.com','787932123');
+
+    =   To delete and clear all rows in a table, type:
+        TRUNCATE TABLE <tbName>;
+
