@@ -1,0 +1,315 @@
+	    create table priya1 (  
+  	student_id          INT(10)              NOT NULL AUTO_INCREMENT,
+                student_name        VARCHAR(100)        NOT NULL,
+                father_name         VARCHAR(100)        DEFAULT NULL,
+                gender              ENUM('F', 'M')      DEFAULT NULL,
+                date_of_birth       DATE                DEFAULT NULL,
+                email_id            VARCHAR(100)        DEFAULT NULL,
+                mobile_no           VARCHAR(100)        DEFAULT NULL,
+                PRIMARY KEY(student_id)
+            );
+
+ INSERT INTO priya1(student_name,father_name,gender,date_of_birth,email_id,mobile_no)
+            VALUES('Asutosh Parida','Parida','M','1999-11-25','asutoshparida@gmail.com','9798168568'),
+                  ('Asim Hembram','Hembram','M','1998-03-18','asimhembram@gmail.com','9778911223'),
+                  ('Priyabrata Sahoo','Sahoo','M','1998-05-11','priyabrata@gmail.com','7871122334'),
+                  ('Susmita Parida','Parida','F','1997-06-04','susmitaparida@gmail.com','787932123');
+
+
+ 
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\ivis>path
+PATH=C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\WiFi\bin\;C:\Program Files\Common Files\Intel\WirelessCommon\;C:\Program Files\PuTTY\;C:\xampp1\mysql\bin;C:\Users\ivis\AppData\Local\Microsoft\WindowsApps;;C:\Users\ivis\AppData\Local\Programs\Microsoft VS Code\bin
+
+C:\Users\ivis>mysqi -uroot -p
+'mysqi' is not recognized as an internal or external command,
+operable program or batch file.
+
+C:\Users\ivis>mysql -uroot -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 8
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create database priya;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| assessment         |
+| information_schema |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| priya              |
+| test               |
++--------------------+
+7 rows in set (0.001 sec)
+
+MariaDB [(none)]> create table priya1 (
+    -> student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+    ->                 student_name        VARCHAR(100)        NOT NULL,
+    ->                 father_name         VARCHAR(100)        DEFAULT NULL,
+    ->                 gender              ENUM('F', 'M')      DEFAULT NULL,
+    ->                 date_of_birth       DATE                DEFAULT NULL,
+    ->                 email_id            VARCHAR(100)        DEFAULT NULL,
+    ->                 mobile_no           VARCHAR(100)        DEFAULT NULL,
+    ->                 PRIMARY KEY(student_id)
+    ->             )
+    ->
+    -> ;
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]>         student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+    ->                 student_name        VARCHAR(100)        NOT NULL,
+    ->                 father_name         VARCHAR(100)        DEFAULT NULL,
+    ->                 gender              ENUM('F', 'M')      DEFAULT NULL,
+    ->                 date_of_birth       DATE                DEFAULT NULL,
+    ->                 email_id            VARCHAR(100)        DEFAULT NULL,
+    ->                 mobile_no           VARCHAR(100)        DEFAULT NULL,
+    ->                 PRIMARY KEY(student_id)
+    ->             );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+            ...' at line 1
+MariaDB [(none)]>     create table priya1 (
+    ->   student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+    ->                 student_name        VARCHAR(100)        NOT NULL,
+    ->                 father_name         VARCHAR(100)        DEFAULT NULL,
+    ->                 gender              ENUM('F', 'M')      DEFAULT NULL,
+    ->                 date_of_birth       DATE                DEFAULT NULL,
+    ->                 email_id            VARCHAR(100)        DEFAULT NULL,
+    ->                 mobile_no           VARCHAR(100)        DEFAULT NULL,
+    ->                 PRIMARY KEY(student_id)
+    ->             );
+ERROR 1046 (3D000): No database selected
+MariaDB [(none)]> use priya
+Database changed
+MariaDB [priya]>     create table priya1 (
+    ->   student_id          INT(6)              NOT NULL AUTO_INCREMENT,
+    ->                 student_name        VARCHAR(100)        NOT NULL,
+    ->                 father_name         VARCHAR(100)        DEFAULT NULL,
+    ->                 gender              ENUM('F', 'M')      DEFAULT NULL,
+    ->                 date_of_birth       DATE                DEFAULT NULL,
+    ->                 email_id            VARCHAR(100)        DEFAULT NULL,
+    ->                 mobile_no           VARCHAR(100)        DEFAULT NULL,
+    ->                 PRIMARY KEY(student_id)
+    ->             );
+Query OK, 0 rows affected (0.650 sec)
+
+MariaDB [priya]> describe priya1
+    ->
+    -> );
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 3
+MariaDB [priya]> describe priya1;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| student_id    | int(6)        | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(100)  | NO   |     | NULL    |                |
+| father_name   | varchar(100)  | YES  |     | NULL    |                |
+| gender        | enum('F','M') | YES  |     | NULL    |                |
+| date_of_birth | date          | YES  |     | NULL    |                |
+| email_id      | varchar(100)  | YES  |     | NULL    |                |
+| mobile_no     | varchar(100)  | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.128 sec)
+
+MariaDB [priya]> create table (
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '(' at line 1
+MariaDB [priya]> create table priya1 (
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [priya]> describepriya1
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'describepriya1' at line 1
+MariaDB [priya]> describe priya1;
++---------------+---------------+------+-----+---------+----------------+
+| Field         | Type          | Null | Key | Default | Extra          |
++---------------+---------------+------+-----+---------+----------------+
+| student_id    | int(6)        | NO   | PRI | NULL    | auto_increment |
+| student_name  | varchar(100)  | NO   |     | NULL    |                |
+| father_name   | varchar(100)  | YES  |     | NULL    |                |
+| gender        | enum('F','M') | YES  |     | NULL    |                |
+| date_of_birth | date          | YES  |     | NULL    |                |
+| email_id      | varchar(100)  | YES  |     | NULL    |                |
+| mobile_no     | varchar(100)  | YES  |     | NULL    |                |
++---------------+---------------+------+-----+---------+----------------+
+7 rows in set (0.013 sec)
+
+MariaDB [priya]>  INSERT INTO batch1(student_name,father_name,gender,date_of_birth,email_id,mobile_no)
+    ->             VALUES('Asutosh Parida','Parida','M','1999-11-25','asutoshparida@gmail.com','9798168568'),
+    ->                   ('Asim Hembram','Hembram','M','1998-03-18','asimhembram@gmail.com','9778911223'),
+    ->                   ('Priyabrata Sahoo','Sahoo','M','1998-05-11','priyabrata@gmail.com','7871122334'),
+    ->                   ('Susmita Parida','Parida','F','1997-06-04','susmitaparida@gmail.com','787932123');
+ERROR 1146 (42S02): Table 'priya.batch1' doesn't exist
+MariaDB [priya]>  INSERT INTO priya1(student_name,father_name,gender,date_of_birth,email_id,mobile_no)
+    ->             VALUES('Asutosh Parida','Parida','M','1999-11-25','asutoshparida@gmail.com','9798168568'),
+    ->                   ('Asim Hembram','Hembram','M','1998-03-18','asimhembram@gmail.com','9778911223'),
+    ->                   ('Priyabrata Sahoo','Sahoo','M','1998-05-11','priyabrata@gmail.com','7871122334'),
+    ->                   ('Susmita Parida','Parida','F','1997-06-04','susmitaparida@gmail.com','787932123');
+Query OK, 4 rows affected (0.205 sec)
+Records: 4  Duplicates: 0  Warnings: 0
+
+MariaDB [priya]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [priya]> show table priya1
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'priya1' at line 1
+MariaDB [priya]> show table priya1;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'priya1' at line 1
+MariaDB [priya]> show tables;
++-----------------+
+| Tables_in_priya |
++-----------------+
+| priya1          |
++-----------------+
+1 row in set (0.001 sec)
+
+MariaDB [priya]> select * from priya1;
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+| student_id | student_name     | father_name | gender | date_of_birth | email_id                | mobile_no  |
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+|          1 | Asutosh Parida   | Parida      | M      | 1999-11-25    | asutoshparida@gmail.com | 9798168568 |
+|          2 | Asim Hembram     | Hembram     | M      | 1998-03-18    | asimhembram@gmail.com   | 9778911223 |
+|          3 | Priyabrata Sahoo | Sahoo       | M      | 1998-05-11    | priyabrata@gmail.com    | 7871122334 |
+|          4 | Susmita Parida   | Parida      | F      | 1997-06-04    | susmitaparida@gmail.com | 787932123  |
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+4 rows in set (0.001 sec)
+
+MariaDB [priya]> show tables;
++-----------------+
+| Tables_in_priya |
++-----------------+
+| priya1          |
++-----------------+
+1 row in set (0.001 sec)
+
+MariaDB [priya]> create table priya2(
+    ->          sl_no              int(10)                         not null auto_increment,
+    ->          name               varchar(100)                    not null,
+    ->          mobile_no          varchar(100)                    not null,
+    ->          Email_id           varchar(100)                    not null,
+    ->          user_name          varchar(100)                    not null,
+    ->          primary key(sl_no)
+    ->          );
+Query OK, 0 rows affected (0.397 sec)
+
+MariaDB [priya]>
+MariaDB [priya]> insert into priya2(name,mobile_no,Email_id,user_name)
+    -> values('P S Usha','7008334116','ushanair2956@gmail.com','Ushanair1234'),
+    -> ('Pratapaditya Mishra',       '7586910935',    'mishrapratapaditya1234@gmail.com',    'Mishra-Adi175'),
+    -> ('Sandip Kumar Nayak   ',     '9178335762 ',   'sandipkumarnayak10@gmail.com      ',  'SandipNayak98'),
+    -> ('Sikun Soumyaranjan Ojha',   '6370398943  ',  'sikunsoumyaranjan100@gmail.com     ', 'Sikunsoumyaranjan'),
+    -> ('Gopal Krishna Mistry     ', '7749917379  ',  'gopalpapu86@gmail.com               ','papu86'),
+    -> ('Susmita Parida            ','7978125106   ', 'susmita.paridacs2010@gmail.com      ','srsusmita92'),
+    -> ('Asutosh Parida       ',     '9337407424   ', 'asutoshps554@gmail.com              ','sipu17'),
+    -> ('Priyabrata Sahoo      ',    '9390507733    ','spriyabrata456@gmail.com            ','Priyabrata678'),
+    -> ('Rakesh Das             ',   '8112178110   ', 'rakeshdash431@gmail.com             ','rakeshdas431'),
+    -> ('Asim Hemram             ',  '7978121967   ', 'hemramprem@gmail.com                ','hemr22');
+Query OK, 10 rows affected (0.186 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [priya]> show  * from priya2;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '* from priya2' at line 1
+MariaDB [priya]> select * from priya2;
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+| sl_no | name                       | mobile_no      | Email_id                             | user_name         |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+|     1 | P S Usha                   | 7008334116     | ushanair2956@gmail.com               | Ushanair1234      |
+|     2 | Pratapaditya Mishra        | 7586910935     | mishrapratapaditya1234@gmail.com     | Mishra-Adi175     |
+|     3 | Sandip Kumar Nayak         | 9178335762     | sandipkumarnayak10@gmail.com         | SandipNayak98     |
+|     4 | Sikun Soumyaranjan Ojha    | 6370398943     | sikunsoumyaranjan100@gmail.com       | Sikunsoumyaranjan |
+|     5 | Gopal Krishna Mistry       | 7749917379     | gopalpapu86@gmail.com                | papu86            |
+|     6 | Susmita Parida             | 7978125106     | susmita.paridacs2010@gmail.com       | srsusmita92       |
+|     7 | Asutosh Parida             | 9337407424     | asutoshps554@gmail.com               | sipu17            |
+|     8 | Priyabrata Sahoo           | 9390507733     | spriyabrata456@gmail.com             | Priyabrata678     |
+|     9 | Rakesh Das                 | 8112178110     | rakeshdash431@gmail.com              | rakeshdas431      |
+|    10 | Asim Hemram                | 7978121967     | hemramprem@gmail.com                 | hemr22            |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [priya]> select mobile_no from priya2;
++----------------+
+| mobile_no      |
++----------------+
+| 7008334116     |
+| 7586910935     |
+| 9178335762     |
+| 6370398943     |
+| 7749917379     |
+| 7978125106     |
+| 9337407424     |
+| 9390507733     |
+| 8112178110     |
+| 7978121967     |
++----------------+
+10 rows in set (0.000 sec)
+
+MariaDB [priya]> show table;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '' at line 1
+MariaDB [priya]> show tables;
++-----------------+
+| Tables_in_priya |
++-----------------+
+| priya1          |
+| priya2          |
++-----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [priya]> select * from priya1;
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+| student_id | student_name     | father_name | gender | date_of_birth | email_id                | mobile_no  |
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+|          1 | Asutosh Parida   | Parida      | M      | 1999-11-25    | asutoshparida@gmail.com | 9798168568 |
+|          2 | Asim Hembram     | Hembram     | M      | 1998-03-18    | asimhembram@gmail.com   | 9778911223 |
+|          3 | Priyabrata Sahoo | Sahoo       | M      | 1998-05-11    | priyabrata@gmail.com    | 7871122334 |
+|          4 | Susmita Parida   | Parida      | F      | 1997-06-04    | susmitaparida@gmail.com | 787932123  |
++------------+------------------+-------------+--------+---------------+-------------------------+------------+
+4 rows in set (0.001 sec)
+
+MariaDB [priya]> select * from priya2;
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+| sl_no | name                       | mobile_no      | Email_id                             | user_name         |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+|     1 | P S Usha                   | 7008334116     | ushanair2956@gmail.com               | Ushanair1234      |
+|     2 | Pratapaditya Mishra        | 7586910935     | mishrapratapaditya1234@gmail.com     | Mishra-Adi175     |
+|     3 | Sandip Kumar Nayak         | 9178335762     | sandipkumarnayak10@gmail.com         | SandipNayak98     |
+|     4 | Sikun Soumyaranjan Ojha    | 6370398943     | sikunsoumyaranjan100@gmail.com       | Sikunsoumyaranjan |
+|     5 | Gopal Krishna Mistry       | 7749917379     | gopalpapu86@gmail.com                | papu86            |
+|     6 | Susmita Parida             | 7978125106     | susmita.paridacs2010@gmail.com       | srsusmita92       |
+|     7 | Asutosh Parida             | 9337407424     | asutoshps554@gmail.com               | sipu17            |
+|     8 | Priyabrata Sahoo           | 9390507733     | spriyabrata456@gmail.com             | Priyabrata678     |
+|     9 | Rakesh Das                 | 8112178110     | rakeshdash431@gmail.com              | rakeshdas431      |
+|    10 | Asim Hemram                | 7978121967     | hemramprem@gmail.com                 | hemr22            |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+10 rows in set (0.000 sec)
+
+MariaDB [priya]> select student_id from priya1;
++------------+
+| student_id |
++------------+
+|          1 |
+|          2 |
+|          3 |
+|          4 |
++------------+
+4 rows in set (0.000 sec)
+
+MariaDB [priya]> show tables;
++-----------------+
+| Tables_in_priya |
++-----------------+
+| priya1          |
+| priya2          |
++-----------------+
+2 rows in set (0.001 sec)
+
+MariaDB [priya]>
