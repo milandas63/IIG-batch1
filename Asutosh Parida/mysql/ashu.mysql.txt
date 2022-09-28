@@ -1,0 +1,109 @@
+ Microsoft Windows [Version 10.0.22000.978]
+(c) Microsoft Corporation. All rights reserved.
+
+C:\Users\91933>MYSQL  -UROOT -P
+MYSQL: unknown option '-R'
+
+C:\Users\91933>mysql -uroot -p
+Enter password:
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 436
+Server version: 10.4.24-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> create databases ashu;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'databases ashu' at line 1
+MariaDB [(none)]> creat database ashu
+    -> creat database ashu,
+    -> ;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'creat database ashu
+creat database ashu,' at line 1
+MariaDB [(none)]> creat database;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'creat database' at line 1
+MariaDB [(none)]> show databases;
++--------------------+
+| Database           |
++--------------------+
+| assessment         |
+| iig_batch1         |
+| information_schema |
+| marks              |
+| mysql              |
+| performance_schema |
+| phpmyadmin         |
+| test               |
+| test _assessment2  |
++--------------------+
+9 rows in set (0.001 sec)
+
+MariaDB [(none)]> create database rakesh;
+Query OK, 1 row affected (0.002 sec)
+
+MariaDB [(none)]> use rakesh;
+Database changed
+MariaDB [rakesh]> create table  ashu (
+    ->  sl_no              int(10)                         not null auto_increment,
+    ->           name               varchar(100)                    not null,
+    ->           mobile_no          varchar(100)                    not null,
+    ->           Email_id           varchar(100)                    not null,
+    ->           user_name          varchar(100)                    not null,
+    ->           primary key(sl_no)
+    ->          );
+Query OK, 0 rows affected (0.610 sec)
+
+MariaDB [rakesh]> describe ashu;
++-----------+--------------+------+-----+---------+----------------+
+| Field     | Type         | Null | Key | Default | Extra          |
++-----------+--------------+------+-----+---------+----------------+
+| sl_no     | int(10)      | NO   | PRI | NULL    | auto_increment |
+| name      | varchar(100) | NO   |     | NULL    |                |
+| mobile_no | varchar(100) | NO   |     | NULL    |                |
+| Email_id  | varchar(100) | NO   |     | NULL    |                |
+| user_name | varchar(100) | NO   |     | NULL    |                |
++-----------+--------------+------+-----+---------+----------------+
+5 rows in set (0.124 sec)
+MariaDB [rakesh]> insert into ashu(name,mobile_no,Email_id,user_name)
+    -> values('P S Usha','7008334116','ushanair2956@gmail.com','Ushanair1234'),
+    -> ('Pratapaditya Mishra',       '7586910935',    'mishrapratapaditya1234@gmail.com',    'Mishra-Adi175'),
+    -> ('Sandip Kumar Nayak   ',     '9178335762 ',   'sandipkumarnayak10@gmail.com      ',  'SandipNayak98'),
+    -> ('Sikun Soumyaranjan Ojha',   '6370398943  ',  'sikunsoumyaranjan100@gmail.com     ', 'Sikunsoumyaranjan'),
+    -> ('Gopal Krishna Mistry     ', '7749917379  ',  'gopalpapu86@gmail.com               ','papu86'),
+    -> ('Susmita Parida            ','7978125106   ', 'susmita.paridacs2010@gmail.com      ','srsusmita92'),
+    -> ('Asutosh Parida       ',     '9337407424   ', 'asutoshps554@gmail.com              ','sipu17'),
+    -> ('Priyabrata Sahoo      ',    '9390507733    ','spriyabrata456@gmail.com            ','Priyabrata678'),
+    -> ('Rakesh Das             ',   '8112178110   ', 'rakeshdash431@gmail.com             ','rakeshdas431'),
+    -> ('Asim Hemram             ',  '7978121967   ', 'hemramprem@gmail.com                ','hemr22');
+Query OK, 10 rows affected (0.091 sec)
+Records: 10  Duplicates: 0  Warnings: 0
+
+MariaDB [rakesh]> show tables;
++------------------+
+| Tables_in_rakesh |
++------------------+
+| ashu             |
++------------------+
+1 row in set (0.001 sec)
+
+MariaDB [rakesh]> selet * from ashu;
+ERROR 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'selet * from ashu' at line 1
+MariaDB [rakesh]> select * from ashu;
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+| sl_no | name                       | mobile_no      | Email_id                             | user_name         |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+|     1 | P S Usha                   | 7008334116     | ushanair2956@gmail.com               | Ushanair1234      |
+|     2 | Pratapaditya Mishra        | 7586910935     | mishrapratapaditya1234@gmail.com     | Mishra-Adi175     |
+|     3 | Sandip Kumar Nayak         | 9178335762     | sandipkumarnayak10@gmail.com         | SandipNayak98     |
+|     4 | Sikun Soumyaranjan Ojha    | 6370398943     | sikunsoumyaranjan100@gmail.com       | Sikunsoumyaranjan |
+|     5 | Gopal Krishna Mistry       | 7749917379     | gopalpapu86@gmail.com                | papu86            |
+|     6 | Susmita Parida             | 7978125106     | susmita.paridacs2010@gmail.com       | srsusmita92       |
+|     7 | Asutosh Parida             | 9337407424     | asutoshps554@gmail.com               | sipu17            |
+|     8 | Priyabrata Sahoo           | 9390507733     | spriyabrata456@gmail.com             | Priyabrata678     |
+|     9 | Rakesh Das                 | 8112178110     | rakeshdash431@gmail.com              | rakeshdas431      |
+|    10 | Asim Hemram                | 7978121967     | hemramprem@gmail.com                 | hemr22            |
++-------+----------------------------+----------------+--------------------------------------+-------------------+
+10 rows in set (0.001 sec)
+
+MariaDB [rakesh]>
