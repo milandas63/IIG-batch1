@@ -1,0 +1,432 @@
+Microsoft Windows [Version 10.0.19044.2006]
+(c) Microsoft Corporation. All rights reserved.
+
+D:\IIG\Batch-1\Project\Test-Evaluation>mysqldump -uroot assessment > oldwork.sql
+
+D:\IIG\Batch-1\Project\Test-Evaluation>mysql -uroot
+Welcome to the MariaDB monitor.  Commands end with ; or \g.
+Your MariaDB connection id is 27
+Server version: 10.4.14-MariaDB mariadb.org binary distribution
+
+Copyright (c) 2000, 2018, Oracle, MariaDB Corporation Ab and others.
+
+Type 'help;' or '\h' for help. Type '\c' to clear the current input statement.
+
+MariaDB [(none)]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| ashu                |
+| assessment          |
+| bjems2_cbse         |
+| church_cocbbsr      |
+| employee            |
+| example             |
+| hello               |
+| iig_batch1          |
+| information_schema  |
+| j4g02               |
+| j4g03               |
+| journey_booking     |
+| learnjobs           |
+| learyqto_assessment |
+| learyqto_learnjobs  |
+| loyola_icse         |
+| mtech               |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+21 rows in set (0.002 sec)
+
+MariaDB [(none)]> drop database assessment;
+Query OK, 6 rows affected (0.046 sec)
+
+MariaDB [(none)]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| ashu                |
+| bjems2_cbse         |
+| church_cocbbsr      |
+| employee            |
+| example             |
+| hello               |
+| iig_batch1          |
+| information_schema  |
+| j4g02               |
+| j4g03               |
+| journey_booking     |
+| learnjobs           |
+| learyqto_assessment |
+| learyqto_learnjobs  |
+| loyola_icse         |
+| mtech               |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+20 rows in set (0.003 sec)
+
+MariaDB [(none)]> source oldwork.sql
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 22 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 25 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.001 sec)
+
+ERROR 1046 (3D000) at line 40 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 41 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 42 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 43 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 50 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 53 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 68 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 69 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 70 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 71 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 78 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 81 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.001 sec)
+
+ERROR 1046 (3D000) at line 99 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 100 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 101 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 102 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 109 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+ERROR 1046 (3D000) at line 112 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 129 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 130 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 131 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 132 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 139 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 142 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 163 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 164 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 165 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 166 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 173 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 176 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+ERROR 1046 (3D000) at line 194 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 195 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 196 in file: 'oldwork.sql': No database selected
+ERROR 1046 (3D000) at line 197 in file: 'oldwork.sql': No database selected
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+MariaDB [(none)]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| ashu                |
+| bjems2_cbse         |
+| church_cocbbsr      |
+| employee            |
+| example             |
+| hello               |
+| iig_batch1          |
+| information_schema  |
+| j4g02               |
+| j4g03               |
+| journey_booking     |
+| learnjobs           |
+| learyqto_assessment |
+| learyqto_learnjobs  |
+| loyola_icse         |
+| mtech               |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+20 rows in set (0.002 sec)
+
+MariaDB [(none)]> create database myassess;
+Query OK, 1 row affected (0.004 sec)
+
+MariaDB [(none)]> use myassess;
+Database changed
+MariaDB [myassess]> source oldwork.sql;
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.002 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.032 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.003 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 8 rows affected (0.006 sec)
+Records: 8  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.034 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.004 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 5 rows affected (0.002 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.034 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.003 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 105 rows affected (0.005 sec)
+Records: 105  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.029 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.002 sec)
+
+Query OK, 0 rows affected (0.002 sec)
+
+Query OK, 5 rows affected (0.002 sec)
+Records: 5  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.035 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.003 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 34 rows affected (0.002 sec)
+Records: 34  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.018 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.002 sec)
+
+Query OK, 0 rows affected (0.001 sec)
+
+Query OK, 2 rows affected (0.002 sec)
+Records: 2  Duplicates: 0  Warnings: 0
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+Query OK, 0 rows affected (0.000 sec)
+
+MariaDB [myassess]> show databases;
++---------------------+
+| Database            |
++---------------------+
+| ashu                |
+| bjems2_cbse         |
+| church_cocbbsr      |
+| employee            |
+| example             |
+| hello               |
+| iig_batch1          |
+| information_schema  |
+| j4g02               |
+| j4g03               |
+| journey_booking     |
+| learnjobs           |
+| learyqto_assessment |
+| learyqto_learnjobs  |
+| loyola_icse         |
+| mtech               |
+| myassess            |
+| mysql               |
+| performance_schema  |
+| phpmyadmin          |
+| test                |
++---------------------+
+21 rows in set (0.002 sec)
+
+MariaDB [myassess]> use myassess;
+Database changed
+MariaDB [myassess]> show tables;
++-------------------------------+
+| Tables_in_myassess            |
++-------------------------------+
+| assess_answer_001             |
+| assess_question_level         |
+| assess_question_subject       |
+| assess_question_subject_group |
+| assess_question_type          |
+| assess_questions              |
++-------------------------------+
+6 rows in set (0.001 sec)
+
+MariaDB [myassess]>

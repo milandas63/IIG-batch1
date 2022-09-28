@@ -1,0 +1,55 @@
+GENERAL FEATURES OF THE TEST-ASSESSMENT MODULE
+
+1.  Every question must be tagged with a category field, i.e. academic specialization of the student.
+        Example:
+         i.     HTML
+        ii.     CSS
+       iii.     JavaScript
+        iv.     Core Java
+         v.     Advanced Java
+        vi.     Angular
+       vii.     Spring
+      viii.     Spring Boot
+        ix.     GitHub
+
+2.  Questions must have multiple formats:
+         i.     Multiple Choice
+        ii.     True/False
+       iii.     Fill-in-the-Blank
+        iv.     Fill-in-Multiple-Blanks
+         v.     Multiple Answers
+        vi.     Multiple Drop-down (can be used for Likert scale)
+       vii.     Matching
+      viii.     Numerical Answer
+        ix.     Formula (simple formula and single variable)
+         x.     Essay or Descriptive Answer
+        xi.     File Upload
+
+3.  A different form must be provided to enter the question and associated answer choices, if any.
+
+4.  Question difficulty level specification
+         i.     Easy
+        ii.     Medium
+       iii.     Difficult
+        iv.     Very difficult
+
+5.  Every question will have fixed-mark and marking facilities defined:
+         i.     Minus marking
+        ii.     Full mark
+       iii.     Bonus mark
+
+6.  Every question must be associated with answers/multiple answers/patterns etc.
+
+7.  The assessment test questions should be generated on parameters set by the evaluator
+         i.     Number of questions
+        ii.     Random picking of questions (yes/no)
+       iii.     Randomize sequence of answers displayed
+        iv.     Timer setting (time for each question)
+         v.     Timer display (yes/no)
+        vi.     Generate questions from all categories (yes/no)
+       vii.     Go back to edit the previous question (yes/no)
+      viii.     Manual selection of questions
+
+8.  Options to print the question-sheet/answer-sheet of the student after the test or in future.
+
+9.  Result sheet with the list of students in the batch for the notice board.
