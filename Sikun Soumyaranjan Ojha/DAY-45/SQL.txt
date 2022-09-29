@@ -1,0 +1,123 @@
+SELECT "TABLE subjects";
+DROP TABLE IF EXISTS subjects;
+CREATE TABLE subjects(
+	sub_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	sub_name                 VARCHAR(100)           NOT NULL UNIQUE,
+	sub_full                 VARCHAR(200)           DEFAULT NULL UNIQUE,
+	sub_abbr                 VARCHAR(20)            DEFAULT NULL UNIQUE,
+	del                      ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(sub_id)
+);
+
+INSERT INTO subjects(sub_name, sub_full, sub_abbr) VALUES
+	("HTML5", "Hyper Text Markup Language", "HTML"),
+	("CSS3", "Cascading Style Sheet", "CSS"),
+	("Core Java", "Java 2 Standard Edition", "Java"),
+	("Advanced Java", "Java 2 Enterprise Edition", "AdvJava");
+
+CREATE TABLE mark_policy(
+	policy_id                       INT(6)                  NOT NULL AUTO_INCREMENT,
+	policy_name                     VARCHAR(100)            NOT NULL,
+	policy_desc                     VARCHAR(200)            DEFAULT NULL,
+	policy_abbr                     VARCHAR(20)             DEFAULT NULL,
+	del                             ENUM("*")               DEFAULT NULL,
+	PRIMARY KEY(policy_id)
+);
+
+CREATE TABLE question_type(
+	type_id                         INT(6)                  NOT NULL AUTO_INCREMENT,
+	type_name                       VARCHAR(100)            NOT NULL,
+	type_desc                       VARCHAR(200)            DEFAULT NULL,
+	type_abbr                       VARCHAR(20)             DEFAULT NULL,
+	del                             ENUM("*")               DEFAULT NULL,
+	PRIMARY KEY(type_id)
+);
+
+CREATE TABLE level(
+	level_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	level_name                 VARCHAR(100)           NOT NULL UNIQUE,
+	level_desc                 VARCHAR(200)           DEFAULT NULL UNIQUE,
+	level_abbr                 VARCHAR(20)            DEFAULT NULL UNIQUE,
+	del                        ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(level_id)
+);
+INSERT INTO level(level_name, level_desc, level_abbr) VALUES
+	("Easy", "Silly", null),
+	("Medium", "Average", null),
+	("Difficult", "Hard", null),
+	("Very Difficult", "Very Hard", null);
+
+CREATE TABLE grade(
+	grade_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	grade_name                 VARCHAR(100)           NOT NULL,
+	grade_desc                 VARCHAR(200)           DEFAULT NULL,
+	grade_abbr                 VARCHAR(20)            DEFAULT NULL,
+	del                       ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(grade_id)
+);
+INSERT INTO grade(grade_name, grade_desc, grade_abbr) VALUES
+	("Poor", "Low", null),
+	("Fair", "Good", null),
+	("Good", "Better", null),
+	("Excellent", "Best", null);
+
+INSERT INTO mcq(mcq_name, mcq_desc, mcq_abbr) VALUES
+	("Qno", "Number of Questions", null),
+	("Answer-option", "Select answer", null),
+	("Correct(Y/N)", "If Correct", null);
+
+CREATE TABLE duration(
+	duration_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	duration_name                 VARCHAR(100)           NOT NULL,
+	duration_desc                 VARCHAR(200)           DEFAULT NULL,
+	duration_abbr                 VARCHAR(20)            DEFAULT NULL,
+	del                           ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(duration_id)
+);
+
+INSERT INTO duration(duration_name, duration_desc, duration_abbr) VALUES
+	("30 minuts", "Very Short Time", null),
+	("1 hour", "short Time", null),
+	("1.30 hour", "Fair Time", null),
+	("2 hours", "Sufficient Time", null);
+
+CREATE TABLE generate(
+	generate_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	generate_name                 VARCHAR(100)           NOT NULL,
+	generate_desc                 VARCHAR(200)           DEFAULT NULL,
+	generate_abbr                 VARCHAR(20)            DEFAULT NULL,
+	del                           ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(generate_id)
+);
+
+INSERT INTO generate(generate_name, generate_desc, generate_abbr) VALUES
+	("No", "Question No", null),
+	("No-of-Question", "How Many Questions", null);
+
+CREATE TABLE answer(
+	answer_id                   INT(6)                 NOT NULL AUTO_INCREMENT,
+	answer_name                 VARCHAR(100)           NOT NULL,
+	answer_desc                 VARCHAR(200)           DEFAULT NULL,
+	answer_abbr                 VARCHAR(20)            DEFAULT NULL,
+	del                           ENUM("*")              DEFAULT NULL,
+	PRIMARY KEY(answer_id)
+);
+
+INSERT INTO answer(answer_name, answer_desc, answer_abbr) VALUES
+	("QNo", "Question No", null),
+	("Q-Type-Id", "Types Of Question", null);
+
+CREATE TABLE question(
+	question_id                   INT(8)                 NOT NULL AUTO_INCREMENT,
+	question_text                 VARCHAR(250)           NOT NULL,
+	subject_id                    INT(6)                 NOT NULL REFERENCES subject(subject_id),
+        question_type_id              INT(6)                 NOT NULL REFERENCES question_type(type_id),
+	policy_id                     INT(6)                 NOT NULL REFERENCES policy(policy_id),
+	grade_id                      INT(6)                 NOT NULL REFERENCES grade(grade_id),
+	level_id                      INT(6)                 NOT NULL REFERENCES level(level_id),
+	PRIMARY KEY(question_id)
+);
+INSERT INTO question(question_text,subject_id,question_type_id,policy_id,grade_id,level_id) VALUES
+	("Who Invented Java", "1", "1","2","2","1"),
+	("Who Invented Python", "2", "1","2","2","1"),
+        ("Who Invented css", "3", "1","2","2","1");
