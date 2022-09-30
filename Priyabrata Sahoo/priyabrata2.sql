@@ -91,7 +91,7 @@ participant_id          INT(6)            NOT NULL REFERENCES participantt(parti
 result                  DOUBLE(6,2)       NOT NULL,
 PRIMARY KEY(result_id)
 );
-INSERT INTO results(event_id,attempt_id,participant_id,result)VALUE
+INSERT INTO result(event_id,attempt_id,participant_id,result)VALUE
                    ("1",     "1",       "1",           "6.9"),
                    ("1",     "1",       "2",           "6.5"),
                    ("1",     "1",       "3",           "6.2"),
