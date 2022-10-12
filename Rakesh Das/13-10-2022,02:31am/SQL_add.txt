@@ -1,0 +1,57 @@
+package sql_project;
+import java.util.Scanner;
+
+	import java.sql.Connection;
+	import java.sql.DriverManager;
+	import java.sql.ResultSet;
+	import java.sql.SQLException;
+	import java.sql.Statement;
+	
+	
+	public class SQL_add {
+		Scanner sa = new Scanner(System.in);
+
+	    String qt,s_id,q_type_id,p_id,l_id;
+		Connection conn;                                         
+		Statement stmt;
+		ResultSet rs;
+
+		public SQL_add() {
+			System.out.println("Enter question text : ");
+			qt = sa.nextLine();
+			System.out.println("Enter subject id : ");
+			s_id = sa.nextLine();
+			System.out.println("Enter question type id : ");
+			q_type_id = sa.nextLine();
+			System.out.println("Enter policy id : ");
+			p_id = sa.nextLine();
+			System.out.println("Enter level id : ");
+			l_id = sa.nextLine();
+			try {
+				Class.forName("com.mysql.jdbc.Driver");
+				conn = DriverManager.getConnection("jdbc:mysql://localhost:3306/task","root","");
+				stmt = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_UPDATABLE);
+				rs = stmt.executeQuery("SELECT * FROM questions");
+				rs.moveToInsertRow();
+				rs.updateString("question_text", qt);
+				rs.updateString("subject_id", s_id);
+				rs.updateString("question_type_id", q_type_id);
+				rs.updateString("policy_id", p_id);
+				rs.updateString("level_id", l_id);
+				rs.insertRow();
+				rs.moveToCurrentRow();
+				conn.close();
+			} catch(ClassNotFoundException e) {
+				System.out.println(e);
+			} catch(SQLException e) {
+				System.out.println(e);
+			} catch(Exception e) {
+				System.out.println(e);
+			}
+		}
+		public static void main(String[] args) {
+			new SQL_add();
+		}
+	}
+
+
