@@ -1,3 +1,4 @@
+//this is not fully functioned programme. only add statement works.
 package sql_project;
 import java.util.Scanner;
 import java.sql.Connection;
