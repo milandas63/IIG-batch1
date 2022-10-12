@@ -1,0 +1,232 @@
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
++-------------+-------------------------------------------------------+
+6 rows in set (0.000 sec)
+
+MariaDB [task]> select question_id,question_text from questions;
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
+|           7 | patha padha hauni?                                    |
++-------------+-------------------------------------------------------+
+7 rows in set (0.000 sec)
+
+MariaDB [task]> select question_id,question_text from questions;
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
+|           7 | patha padha hauni?                                    |
+|           8 | patha padha hauni?                                    |
++-------------+-------------------------------------------------------+
+8 rows in set (0.000 sec)
+
+MariaDB [task]> select question_id,question_text from questions;
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
+|           7 | patha padha hauni?                                    |
+|           8 | patha padha hauni?                                    |
++-------------+-------------------------------------------------------+
+8 rows in set (0.001 sec)
+
+MariaDB [task]> select question_id,question_text from questions;
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
+|           7 | patha padha hauni?                                    |
+|           8 | patha padha hauni?                                    |
++-------------+-------------------------------------------------------+
+8 rows in set (0.000 sec)
+
+MariaDB [task]> select question_id,question_text from questions;
++-------------+-------------------------------------------------------+
+| question_id | question_text                                         |
++-------------+-------------------------------------------------------+
+|           1 | who invented java                                     |
+|           2 | The first version of java is called                   |
+|           3 | How many primitive data exists in java                |
+|           4 | What is Tuples in Python                              |
+|           5 | HTML stands for                                       |
+|           6 | Which CSS property is used to define the font of text |
+|           7 | patha padha hauni?                                    |
+|           8 | patha padha hauni?                                    |
++-------------+-------------------------------------------------------+
+8 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id |
++-------------+-------------------------------------------------------+------------+-------------------+------------+----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy     |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy     |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy     |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy     |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy     |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy     |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard     |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard     |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard     |
++-------------+-------------------------------------------------------+------------+-------------------+------------+----------+
+9 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer   | MCQ               | Half mark  | very easy |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer   | MCQ               | Half mark  | very easy |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer   | MCQ               | Half mark  | very easy |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer   | MCQ               | Half mark  | very easy |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]>
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA       | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA       | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA       | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python     | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML       | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS        | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4          | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl   | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer   | MCQ               | Half mark  | very easy |
++-------------+-------------------------------------------------------+------------+-------------------+------------+-----------+
+10 rows in set (0.000 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id  | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA        | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA        | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA        | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python      | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML        | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS         | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4           | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4           | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl    | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer    | MCQ               | Half mark  | very easy |
+|          11 | efkgfmf                                               | fdgkdksdb   | jddkjjdgjf        | dfjje      | jdkkn     |
+|          12 | swegh                                                 | dfdgjfngfng | hfdhgfgks         | fhgdjhkh   | jojjhs    |
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+12 rows in set (0.001 sec)
+
+MariaDB [task]> select * from questions;
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+| question_id | question_text                                         | subject_id  | question_type_id  | policy_id  | level_id  |
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+|           1 | who invented java                                     | JAVA        | MCQ               | Full Mark  | Easy      |
+|           2 | The first version of java is called                   | JAVA        | MCQ               | Full Mark  | Easy      |
+|           3 | How many primitive data exists in java                | JAVA        | MCQ               | Full mark  | Easy      |
+|           4 | What is Tuples in Python                              | Python      | MCQ               | Full Mark  | Easy      |
+|           5 | HTML stands for                                       | HTML        | Fill In The Blank | Full Mark  | Easy      |
+|           6 | Which CSS property is used to define the font of text | CSS         | Fill In The Blank | Full Mark  | Easy      |
+|           7 | patha padha hauni?                                    | 4           | Very Poor         | Neglegence | Hard      |
+|           8 | patha padha hauni?                                    | 4           | Very Poor         | Neglegence | Hard      |
+|           9 | gjfjhjhj                                              | hkgjjkjl    | bjjkhofg          | Neglegence | Hard      |
+|          10 | who invented computer                                 | computer    | MCQ               | Half mark  | very easy |
+|          11 | efkgfmf                                               | fdgkdksdb   | jddkjjdgjf        | dfjje      | jdkkn     |
+|          12 | swegh                                                 | dfdgjfngfng | hfdhgfgks         | fhgdjhkh   | jojjhs    |
+|          13 | who invented apple inc. ?                             | computer    | mcq               | full mark  | easy      |
++-------------+-------------------------------------------------------+-------------+-------------------+------------+-----------+
+13 rows in set (0.000 sec)
