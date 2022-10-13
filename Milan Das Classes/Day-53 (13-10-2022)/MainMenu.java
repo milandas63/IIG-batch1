@@ -7,8 +7,6 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Scanner;
 
-import javax.naming.spi.DirStateFactory.Result;
-
 import string.helper.Stretcher;
 
 public class MainMenu {
@@ -105,6 +103,7 @@ public class MainMenu {
 	public void doChange() throws SQLException {
 		String question_id;
 		String column_name, column_data;
+		boolean found = false;
 
 		for(int i=0; i<5; i++) System.out.println();
 
@@ -115,21 +114,45 @@ public class MainMenu {
 		System.out.print(s.spaces(15) + s.padL("Column Data: ", 20));
 		column_data = scan.nextLine();
 		
-		rs.absolute(Integer.parseInt(question_id));
-		rs.updateString(column_name, column_data);
-		rs.updateRow();
+		//rs.absolute(Integer.parseInt(question_id));
+		rs.beforeFirst();
+		while(rs.next()) {
+			if(rs.getInt("question_id")==Integer.parseInt(question_id)) {
+				found = true;
+				break;
+			}
+		}
+		if(found) {
+			rs.updateString(column_name, column_data);
+			rs.updateRow();
+		} else {
+			System.out.println("Question ID "+question_id+" Not Found!");
+		}
 	}
 	
 	public void doDelete() throws SQLException {
 		int question_id;
+		boolean found = false;
 
 		for(int i=0; i<5; i++) System.out.println();
 
 		System.out.print(s.spaces(15) + s.padL("Question ID to Delete: ", 20));
 		question_id = scan.nextInt();
 		
-		rs.absolute(question_id);
-		rs.deleteRow();
+		//rs.absolute(question_id);
+		rs.beforeFirst();
+		while(rs.next()) {
+			if(rs.getInt("question_id")==question_id) {
+				found = true;
+				break;
+			}
+		}
+		if(found) {
+			rs.deleteRow();
+		} else {
+			System.out.println("Question ID "+question_id+" Not Found!");
+		}
+		return;
 	}
 	
 	public static void main(String[] args) {
