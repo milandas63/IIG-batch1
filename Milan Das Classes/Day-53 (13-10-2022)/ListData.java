@@ -10,13 +10,14 @@ public class ListData {
 	ResultSet rs;
 	ResultSetMetaData rsmd;
 	Stretcher s;
-	private int[] colWidth = {12, 70};
+	private int[] colWidth = {12, 70, 10,16,9,8};
 
 	public ListData(ResultSet rs, Stretcher s) throws SQLException {
 		this.rs = rs;
 		rsmd = rs.getMetaData();
 		this.s = s;
 
+		rs.beforeFirst();
 		this.drawLine();
 		System.out.print("|");
 		for(int i=1; i<=rsmd.getColumnCount(); i++) {
