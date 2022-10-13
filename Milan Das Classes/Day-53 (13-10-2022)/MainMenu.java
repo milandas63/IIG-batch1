@@ -48,7 +48,7 @@ public class MainMenu {
 				} else if(response.equals("2")) {
 					this.doAdd();
 				} else if(response.equals("3")) {
-					
+					this.doChange();
 				} else if(response.equals("4")) {
 					this.doDelete();
 				} else if(response.equals("5")) {
@@ -102,6 +102,24 @@ public class MainMenu {
 		rs.moveToCurrentRow();
 	}
 
+	public void doChange() throws SQLException {
+		String question_id;
+		String column_name, column_data;
+
+		for(int i=0; i<5; i++) System.out.println();
+
+		System.out.print(s.spaces(15) + s.padL("Question ID to Change: ", 20));
+		question_id = scan.nextLine();
+		System.out.print(s.spaces(15) + s.padL("Column Name: ", 20));
+		column_name = scan.nextLine();
+		System.out.print(s.spaces(15) + s.padL("Column Data: ", 20));
+		column_data = scan.nextLine();
+		
+		rs.absolute(Integer.parseInt(question_id));
+		rs.updateString(column_name, column_data);
+		rs.updateRow();
+	}
+	
 	public void doDelete() throws SQLException {
 		int question_id;
 
