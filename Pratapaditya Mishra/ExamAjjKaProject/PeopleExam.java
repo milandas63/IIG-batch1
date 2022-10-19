@@ -97,16 +97,16 @@ public class PeopleExam {
 		System.out.print(s.spaces(15) + s.padL("Contact Address: ", 20));
 		contact_address = scan.nextLine();
 		rs.moveToInsertRow();
-		rs.updateString("Contact Name ", contact_name);
-		rs.updateInt("Group id ", group_id);
-		rs.updateInt("Location id ", location_id);
-		rs.updateString("Land Phone No ", land_phone_no);
-		rs.updateString("First Mobile No", mobile_no1);
-		rs.updateString("Second Mobile No", mobile_no2);
-		rs.updateString("Third Mobile No", mobile_no3);
-		rs.updateString("First Email", email_id1);
-		rs.updateString("Second Email", email_id2);
-		rs.updateString("Contact Address", contact_address);
+		rs.updateString("contact_name", contact_name);
+		rs.updateInt("group_id", group_id);
+		rs.updateInt("location_id", location_id);
+		rs.updateString("land_phone_no", land_phone_no);
+		rs.updateString("mobile_no1", mobile_no1);
+		rs.updateString("mobile_no2", mobile_no2);
+		rs.updateString("mobile_no3", mobile_no3);
+		rs.updateString("email_id1", email_id1);
+		rs.updateString("email_id2", email_id2);
+		rs.updateString("contact_address", contact_address);
 		rs.insertRow();
 		rs.moveToCurrentRow();
 	}
