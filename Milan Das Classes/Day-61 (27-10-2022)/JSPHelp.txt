@@ -1,0 +1,204 @@
+<!--
+JSP = Java Server Page
+
+JSP technology is used to create web application just like Servlet technology. It can be thought of as an
+extension to Servlet because it provides more functionality than servlet such as expression language, JSTL,
+etc.
+
+A JSP page consists of HTML tags and JSP tags. The JSP pages are easier to maintain than Servlet because we
+can separate designing and development. It provides some additional features such as Expression Language, 
+Custom Tags, etc.
+
+Advantages of JSP over Servlet
+There are many advantages of JSP over the Servlet. They are as follows:
+
+1)  Extension to Servlet
+    JSP technology is the extension to Servlet technology. We can use all the features of the Servlet in JSP.
+    In addition to, we can use implicit objects, predefined tags, expression language and Custom tags in JSP,
+    that makes JSP development easy.
+
+2)  Easy to maintain
+    JSP can be easily managed because we can easily separate our business logic with presentation logic. In 
+    Servlet technology, we mix our business logic with the presentation logic.
+
+3)  Fast Development: No need to recompile and redeploy
+    If JSP page is modified, we don't need to recompile and redeploy the project. The Servlet code needs to
+    be updated and recompiled if we have to change the look and feel of the application.
+
+4)  Less code than Servlet
+    In JSP, we can use many tags such as action tags, JSTL, custom tags, etc. that reduces the code. Moreover, we can use EL, implicit objects, etc.
+
+
+The Lifecycle of a JSP Page
+The JSP pages follow these phases:
+    =   Translation of JSP Page
+    =   Compilation of JSP Page
+    =   Classloading (the classloader loads class file)
+    =   Instantiation (Object of the Generated Servlet is created).
+    =   Initialization (the container invokes jspInit() method).
+    =   Request processing (the container invokes _jspService() method).
+    =   Destroy (the container invokes jspDestroy() method).
+
+
+
+
+
+The JSP scripting language elements are categorised into 4 subsets. 
+There are two types of presenting the JSP element tags. The first one is the 
+conventional JSP presentation; the second is xml-JSP presentation.
+
+There are 3 basic elements in JSP, they are as follows:
+*** represents element
+??? represents attributes
++---+-------------+--------------------------+----------------------------------------+
+|   | ELEMENT     | CONVENTIONAL             | XML JSP                                |
+|   | DESCRIPTION | JSP PRESENTATION         | PRESENTATION                           |
++---+-------------+--------------------------+----------------------------------------+
+| a | COMMENT     |                          |                                        |
+|   |  hidden     | <%--  --%>               |                                        |
+|   |  output     | <!--  -->                |                                        |
+|   |             |                          |                                        |
+| b | DIRECTIVES  | <%@ *** ???="" ???="" %> | <jsp:directives.*** ???="" ???="">     |
+|   |             |                          |                                        |
+| c | SCRIPTING   |                          |                                        |
+|   |  declaration| <%!  %>                  | <jsp:declaration>...</jsp:declaration> |
+|   |  scriplet   | <% ..%>                  | <jsp:scriplet>...</jsp:scriplet>       |
+|   |  expression | <%=  %>                  | <jsp:expression>...</jsp:expression>   |
+|   |             |                          |                                        |
+| d | ACTION      | not applicable           | <jsp:***>...</jsp:***>                 |
++---+-------------+--------------------------+----------------------------------------+
+
+a)  directives: Directives in a JSP page do not produce any output in the
+                generated document. They ask the JSP container to perform
+                certain services for the JSP page.
+    1)  page
+        This element is used for
+        i)      import                  fully qualified class name
+        ii)     session                 true/false
+        iii)    isThreadSafe            true/false
+        iv)     info                    information text
+        v)      errorPage               URL for error page
+        vi)     isErrorPage             true/false
+        vii)    language                java
+        viii)   pageEncoding
+        ix)     extends                 fully qualified class name
+        x)      buffer                  none or sizeKB
+        xi)     autoFlush               true/false
+        xii)    contentType
+                    MIME Type (Type/Subtype)
+                    (Multiple Internet Mail Extension)
+                    Type        Subtype     Description
+                    ------      -------     -----------
+                    text        html        HTML files
+                                plain       Regular ASCII files
+                    image       gif         GIF IMAGE
+                                jpeg        JPEG image
+                                x-bitmap    Microsoft bitmap(*.bmp)
+                    audio       basic       Basic audio files(*.au)
+                                x-wav       Microsoft sound wave files(*.wav)
+                    video       mpeg        Moving Pictures Experts Group videos(*.mpg)
+                                quicktime   Apple QuickTime videos(*.mov)
+                                x-msvideo   Microsoft Audio Video Interleave(*.avi)
+                    application java        Java Class file
+                                pdf         Adobe Acrobat file(*.pdf)
+                                postscript  Postscript file(*.ps)
+                                msword      Microsoft Word file(*.doc)
+                                zip         Compressed ZIP file(*.zip)
+    2)  include
+        i)      file
+    3)  taglib
+        i)      url
+		ii)		uri
+        iii)    prefix
+
+		.tld file
+		<taglib>
+			<tag>
+				<name>..</name>
+				<tag-class>..</tag-class>
+				<variable>
+				</variable>
+				<attribute>
+				</attribute>
+				<attribute>
+				</attribute>
+			</tag>
+			<tag>
+				<name>..</name>
+				<tag-class>..</tag-class>
+				<variable>
+				</variable>
+				<attribute>
+				</attribute>
+			</tag>
+		</taglib>
+
+b)  action
+    1)  <jsp:useBean>
+        i)      id
+        ii)     scope
+        iii)    class
+        iv)     beanName
+        v)      type
+    2)  <jsp:setProperty>
+        i)      name
+        ii)     property
+        iii)    param
+        iv)     value
+    3)  <jsp:getProperty>
+        i)      name
+        ii)     property
+    4)  <jsp:param>
+    5)  <jsp:include>
+    6)  <jsp:forward>
+        i)      page
+    7)  <jsp:plugin>, <jsp:params>, <jsp:fallback>
+        i)      type
+        ii)     code
+        iii)    codebase
+    8)  <jsp:attribute>
+    9)  <jsp:body>
+    10) <jsp:invoke>
+    11) <jsp:doBody>
+    12) <jsp:directives>
+
+c)  script
+    1)  declaration
+    2)  scriplet code
+    3)  = <expression>
+
+
+IMPLICIT OBJECTS:
+----------------
+    1.  request				HttpServletRequest
+    2.  response            HttpServletResponse
+    3.  pageContext
+    4.  session
+    5.  application
+    6.  out
+    7.  config
+    8.  page
+    9.  exception
+
+Source:      c:/Program Files/Apache Group/Tomcat 4.1/webapps/examples/jsp/group42/JSP1.jsp
+Destination: c:/Program Files/Apache Group/Tomcat 4.1/work/Standalone/localhost/examples/jsp/group42/JSP1_jsp.java
+-->
+
+
+
+SYNTAX 				PURPOSE
+jsp:include			Includes a file at the time the page is requested
+jsp:useBean			Finds or instantiates a JavaBean
+jsp:setProperty		Sets the property of a JavaBean
+jsp:getProperty		Inserts the property of a JavaBean into the output
+jsp:forward			Forwards the requester to a new page
+jsp:plugin			Generates browser-specific code that makes an OBJECT or EMBED tag for the Java plugin
+jsp:element			Defines XML elements dynamically.
+jsp:attribute		Defines dynamically defined XML element's attribute.
+jsp:body			Defines dynamically defined XML element's body.
+jsp:text			Use to write template text in JSP pages and documents.
+
+
+
+
+
