@@ -1,0 +1,12 @@
+Spring IoC Container is the core of Spring Framework. 
+There are basically two types of IOC Containers in Spring:
+BeanFactory: BeanFactory is like a factory class that contains a collection of beans.
+ApplicationContext: The ApplicationContext interface is built on top of the BeanFactory interface.
+It creates the objects, configures and assembles their 
+dependency and manage their entire life cycle. 
+The Container uses Dependency Injection(DI) to manage 
+the components that make up the application. 
+IoC container is a framework for implementing automated 
+dependency injection. It contains object creation for 
+the longer ways to use and injects dependencies within the class.
+The Spring container is the core of Spring Framework.
