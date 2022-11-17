@@ -5,15 +5,18 @@ import java.sql.DriverManager;
 import java.sql.SQLException;
 
 public class MyConnection {
-	private static long serialVersionUID = 1L;
-	
 	private Connection conn;
 	private String driverName;
 	private String url;
 	private String user;
 	private String pw;
 
-	private void createConnection() {
+	private MyConnection(String driverName, String url, String user, String pw) {
+		this.driverName = driverName;
+		this.url = url;
+		this.user = user;
+		this.pw = pw;
+		
 		try {
 			System.out.println("Constructor Working");
 			Class.forName(driverName);
@@ -29,24 +32,5 @@ public class MyConnection {
 	
 	public Connection getConn() {
 		return conn;
-	}
-
-	public void setDriverName(String driverName) {
-		System.out.println("Drivername: " + driverName);
-		this.driverName = driverName;
-	}
-
-	public void setUrl(String url) {
-		System.out.println("URL: " + url);
-		this.url = url;
-	}
-
-	public void setUser(String user) {
-		this.user = user;
-	}
-
-	public void setPw(String pw) {
-		this.pw = pw;
-		createConnection();
 	}
 }

@@ -5,9 +5,9 @@
         http://www.springframework.org/schema/beans/spring-beans.xsd">
 
 	<bean id="myconn" class="com.common.MyConnection">
-		<property name ="driverName" value = "com.mysql.jdbc.Driver" />
-		<property name ="url" value = "jdbc:mysql://localhost:3306/kt_global" />
-		<property name ="user" value = "root" />
-		<property name ="pw" value = "" />
+		<constructor-arg name ="driverName" value = "com.mysql.jdbc.Driver" />
+		<constructor-arg name ="url" value = "jdbc:mysql://localhost:3306/loyola_icse" />
+		<constructor-arg name ="user" value = "root" />
+		<constructor-arg name ="pw" value = "" />
 	</bean>
 </beans>
