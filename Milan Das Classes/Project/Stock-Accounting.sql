@@ -311,7 +311,14 @@ CREATE TABLE trn_header(
 	trn_no                  INT(10)             NOT NULL,
 	trn_type				INT(6)				NOT NULL REFERENCES trn_type(trn_type_id),
 	party_id				INT(6)				NOT NULL REFERENCES party(party_id),
+	trn_amount              DOUBLE(12,2)        DEFAULT 0.00,
+	trn_tax_amount
+	trn_disc_amount
 
+	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
+	last_update				TIMESTAMP			DEFAULT NULL,
+    del                		ENUM("*")           DEFAULT NULL,
+    PRIMARY KEY(trn_slno)
 );
 
 
@@ -324,9 +331,7 @@ CREATE TABLE trn_header(
 SELECT "trn_detail";
 DROP TABLE IF EXISTS trn_detail;
 CREATE TABLE trn_detail(
-	trn_type          		INT(100)            NOT NULL AUTO_INCREMENT,
-    trn_no            		INT(100)            NOT NULL,
-    trn_date          		VARCHAR(10)         NOT NULL UNIQUE,
+    trn_slno           		INT(100)            NOT NULL,
     product_id        		INT(100)            NOT NULL,
     batch_no          		VARCHAR(20)         NOT NULL UNIQUE,
     exp_date          		VARCHAR(20)         NOT NULL UNIQUE,
@@ -336,6 +341,8 @@ CREATE TABLE trn_detail(
     rate_mrp          		INT(20)             NOT NULL,
     qty               		INT(255)            NOT NULL,
     free              		INT(255)            NOT NULL,
+	tax_pc
+	amount
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
 	last_update				TIMESTAMP			DEFAULT NULL,
     del                		ENUM("*")           DEFAULT NULL,
