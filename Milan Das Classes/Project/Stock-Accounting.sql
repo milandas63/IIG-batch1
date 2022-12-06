@@ -281,19 +281,21 @@ INSERT INTO trn_type VALUES
 SELECT "TABLE stock";
 DROP TABLE IF EXISTS stock;
 CREATE TABLE stock(
-    product_id         		INT(30)           	NOT NULL AUTO_INCREMENT,
-    batch_no           		VARCHAR(7)       	NOT NULL,
+	stock_trn_no			INT(10)				NOT NULL AUTO_INCREMENT,
+    product_id         		INT(6)           	NOT NULL REFERENCES product(product_id),
+    batch_no           		VARCHAR(7),
     exp_date           		VARCHAR(7)       	NOT NULL,
     mfg_date           		VARCHAR(7)       	NOT NULL,
     rate_purchase      		DOUBLE(10,2)      	DEFAULT 0.00,
-    rate_sale          		DOUBLE(10,2)        NOT NULL,
-    rate_mrp           		DOUBLE(5)           NOT NULL,
-    qty_balance        		DOUBLE(12,3)        NOT NULL,
+    rate_sale          		DOUBLE(10,2)        DEFAULT 0.00,
+    rate_mrp           		DOUBLE(5)           DEFAULT 0.00,
+    qty_balance        		DOUBLE(12,3)        DEFAULT 0.00,
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
 	last_update				TIMESTAMP,
     del                		ENUM("*")           DEFAULT NULL,
-    PRIMARY KEY(product_id)
+    PRIMARY KEY(stock_trn_no)
 );
+CREATE UNIQUE INDEX stock_index1 product_id,batch_no;
 INSERT INTO stock VALUES
     (1,     "EZ0316",      "03/2024",      "02/2022",        59.00,       65.00,      75.00,      100,     1,	NULL, NULL);
 
@@ -314,13 +316,15 @@ CREATE TABLE trn_header(
 	trn_amount              DOUBLE(12,2)        DEFAULT 0.00,
 	trn_tax_amount
 	trn_disc_amount
-
+	trn_net_amount
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
 	last_update				TIMESTAMP			DEFAULT NULL,
     del                		ENUM("*")           DEFAULT NULL,
     PRIMARY KEY(trn_slno)
 );
-
+INSERT INTO trn_header VALUES
+	(1, "2022-12-06", 1, 1, 2, 24330.00, 256.00, 1200.00, 23386.00, 1, NULL, NULL),
+	(2
 
 
 #############################
@@ -331,22 +335,24 @@ CREATE TABLE trn_header(
 SELECT "trn_detail";
 DROP TABLE IF EXISTS trn_detail;
 CREATE TABLE trn_detail(
-    trn_slno           		INT(100)            NOT NULL,
-    product_id        		INT(100)            NOT NULL,
+	trn_id                  INT(12)             NOT NULL AUTO_INCREMENT,
+    trn_slno           		INT(10)             NOT NULL REFERENCES trn_header(trn_slno),
+    product_id        		INT(100)            NOT NULL REFERENCES product(product_id),
     batch_no          		VARCHAR(20)         NOT NULL UNIQUE,
-    exp_date          		VARCHAR(20)         NOT NULL UNIQUE,
-    mfg_date          		VARCHAR(20)         NOT NULL UNIQUE,
+    exp_date          		VARCHAR(7)          NOT NULL UNIQUE,
+    mfg_date          		VARCHAR(7)          NOT NULL UNIQUE,
     rate_purchase     		INT(20)             NOT NULL,
     rate_sale         		INT(20)             NOT NULL,
     rate_mrp          		INT(20)             NOT NULL,
     qty               		INT(255)            NOT NULL,
     free              		INT(255)            NOT NULL,
-	tax_pc
-	amount
+	tax_pc					DOUBLE(6,2)         DEFAULT 0.00,
+	tax_amount				DOUBLE(12,2)        DEFAULT 0.00,
+	amount					DOUBLE(12,2)        DEFAULT 0.00,
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
 	last_update				TIMESTAMP			DEFAULT NULL,
     del                		ENUM("*")           DEFAULT NULL,
-    PRIMARY KEY(trn_type)
+    PRIMARY KEY()
 );
 INSERT INTO trn_detail VALUES
-    (1,    1,    "23-11-2022",       1,        "EZ0316",        "25/03/2024",       "21/02/2022",       59.00,     65.00,      75.00,      3000.00,        300.00,       null);
+    (1,  1,    5,    "EZ0316", "11/2025",       1,        "EZ0316",        "25/03/2024",       "21/02/2022",       59.00,     65.00,      75.00,      3000.00,        300.00,       null);
