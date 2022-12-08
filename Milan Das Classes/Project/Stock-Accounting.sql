@@ -299,7 +299,7 @@ CREATE TABLE stock(
 );
 INSERT INTO stock VALUES
 	(1,   1,   "EZ0316",   "11/2023",   "03/2022",      59.00,     65.00,      75.00,      3000,     1,    1,   NULL,  NULL),
-	(2,   2,   "EZ0312",   "10/2024",   "06/2021",      90.00,     91.00,      93.00,      3540,     1,    1,   NULL,  NULL),
+	(2,   2,   "EZ0412",   "10/2024",   "06/2021",      90.00,     91.00,      93.00,      3540,     1,    1,   NULL,  NULL),
 	(3,   5,   "GZ0315",   "08/2023",   "03/2021",      45.00,     66.00,      77.00,      6950,     1,    1,   NULL,  NULL),
 	(4,   3,   "TZ0311",   "09/2025",   "10/2020",      89.00,     92.00,      96.00,      3690,     1,    1,   NULL,  NULL),
 	(5,   4,   "TZ0315",   "12/2025",   "11/2021",      54.00,     77.00,      79.00,      6899,     1,    1,   NULL,  NULL),
@@ -421,13 +421,13 @@ CREATE TABLE trn_header(
 	trn_disc_amount         DOUBLE(10,2)        DEFAULT 0.00,
 	trn_net_amount          DOUBLE(10,2)        DEFAULT 0.00,
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
-	last_update				TIMESTAMP			DEFAULT NULL,
+	last_update				TIMESTAMP			NOT NULL,
     del                		ENUM("*")           DEFAULT NULL,
     PRIMARY KEY(trn_slno)
 );
 INSERT INTO trn_header VALUES
     (1,  "2022-12-06",   1,   1,   1,     2300.98,    67.58,    87.86,    2280.70,  1,     NULL,    NULL),    # Purchase
-	(2,  "2022-12-22",   2,   1,   1,     25000.00,   888.75,   375.00,   25513.75  1,     NULL,    NULL),    # Purchase
+	(2,  "2022-12-22",   2,   1,   1,     25000.00,   888.75,   375.00,   25513.75, 1,     NULL,    NULL),    # Purchase
     (3,  "2022-12-26",   1,   4,   1001,  50000.00,   1000.50,  500.34,   50500.16, 1,     NULL,    NULL),    # Sale
 	(4,  "2022-12-29",   2,   4,   1002,  45000.00,   900.40,   420.19,   45480.21, 1,     NULL,    NULL),    # Sale
 	(5,  "2022-12-30",   3,   4,   1003,  56700.00,   670.35,   125.50,   57244.85, 1,     NULL,    NULL);    # Sale
@@ -447,23 +447,23 @@ CREATE TABLE trn_detail(
     batch_no          		VARCHAR(20)         NOT NULL UNIQUE,
     exp_date          		VARCHAR(20)         NOT NULL,
     mfg_date          		VARCHAR(20)         NOT NULL,
-    rate_purchase     		DOUBLE(20)          NOT NULL,
-    rate_sale         		DOUBLE(20)          NOT NULL,
-    rate_mrp          		DOUBLE(20)          NOT NULL,
+    rate_purchase     		DOUBLE(20,2)        NOT NULL,
+    rate_sale         		DOUBLE(20,2)        NOT NULL,
+    rate_mrp          		DOUBLE(20,2)        NOT NULL,
     qty               		INT(10)             NOT NULL,
     free              		INT(6)              NOT NULL,
 	tax_pc                  DOUBLE(6,2)         DEFAULT 0.00,
 	tax_amount              DOUBLE(12,2)        DEFAULT 0.00,
 	amount                  DOUBLE(12,2)        DEFAULT 0.00,
 	user_id					INT(6)				NOT NULL REFERENCES user(user_id),
-	last_update				TIMESTAMP			DEFAULT NULL,
+	last_update				TIMESTAMP			NOT NULL,
     del                		ENUM("*")           DEFAULT NULL,
     PRIMARY KEY(trn_id)
 );
 INSERT INTO trn_detail VALUES
     # Purchase #1
     (1,      1,   1,   "EZ0316",   "11/2023",   "03/2022",      59.00,     65.00,      75.00,      3000,     10,    15.50,  68.55,  3676.00,  1,   NULL,  NULL),
-	(2,      1,   2,   "EZ0312",   "10/2024",   "06/2021",      90.00,     91.00,      93.00,      3540,     5,     16.98,  60.96,  4576.00,  1,   NULL,  NULL),
+	(2,      1,   2,   "EZ0412",   "10/2024",   "06/2021",      90.00,     91.00,      93.00,      3540,     5,     16.98,  60.96,  4576.00,  1,   NULL,  NULL),
 	(3,      1,   5,   "GZ0315",   "08/2023",   "03/2021",      45.00,     66.00,      77.00,      6950,     7,     17.87,  67.57,  3575.00,  1,   NULL,  NULL),
 	(4,      1,   3,   "TZ0311",   "09/2025",   "10/2020",      89.00,     92.00,      96.00,      3690,     9,     55.88,  40.76,  4585.00,  1,   NULL,  NULL),
 	(5,      1,   4,   "TZ0315",   "12/2025",   "11/2021",      54.00,     77.00,      79.00,      6899,     12,    46.77,  43.86,  7648.00,  1,   NULL,  NULL),
