@@ -648,3 +648,9 @@ INSERT INTO trn_detail VALUES
 #|                                                                                       TOTAL:   |        |
 #+------------------------------------------------------------------------------------------------+--------+
 #
+#SELECT h.trn_slno,h.trn_type,t.trn_type_desc,h.trn_date,h.trn_no,h.party_id,p.party_name,p.gst_no,p.dl_no,d.product_id,r.product_name,d.qty FROM trn_header AS h
+LEFT JOIN trn_detail AS d ON d.trn_slno=h.trn_slno
+LEFT JOIN product AS r ON r.product_id=d.product_id
+LEFT JOIN trn_type AS t ON t.trn_type_id=h.trn_type
+LEFT JOIN party AS p ON p.party_id=h.party_id
+WHERE h.trn_slno=1;
